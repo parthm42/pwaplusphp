@@ -1,0 +1,6 @@
+INSTALL PROCEDURE
+----------------------------------------------------------------------
+1) Extract the code in any folder under the web root on your webserver
+	tar xvf pwa+php.tar
+2) Point your browser to http://yoursite.com/anyfolder/install.php
+3) Enjoy! 
