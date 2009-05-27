@@ -1,3 +1,5 @@
+<?PHP
+
 #==============================================================================================
 # Copyright 2009 Scott McCandless (smccandl@gmail.com)
 #
@@ -14,21 +16,22 @@
 # limitations under the License.
 #==============================================================================================
 
-<?PHP
-
 #----------------------------------------------------------------------------
 # CONFIGURATION
 #----------------------------------------------------------------------------
 require_once("config.php");
 
-$ALBUM = $_REQUEST['album'];
-$LOCATION = str_replace(" ","",$ALBUM);
-list($ALBUM_TITLE,$tags) = split('_',$ALBUM);
-
 #----------------------------------------------------------------------------
 # VARIABLES
 #----------------------------------------------------------------------------
 $file = "http://picasaweb.google.com/data/feed/api/user/" . $PICASAWEB_USER . "/album/" . $LOCATION . "?kind=photo&thumbsize=" . $THUMBSIZE . "&imgmax=" . $IMGMAX;
+
+#----------------------------------------------------------------------------
+# Grab album data from URL
+#----------------------------------------------------------------------------
+$ALBUM = $_REQUEST['album'];
+$LOCATION = str_replace(" ","",$ALBUM);
+list($ALBUM_TITLE,$tags) = split('_',$ALBUM);
 
 #----------------------------------------------------------------------------
 # Curl code to store XML data from PWA in a variable
@@ -84,6 +87,9 @@ foreach ($vals as $val) {
                                 $imght = $val["attributes"]["HEIGHT"];
                                 $imgwd = $val["attributes"]["WIDTH"];
                                 break;
+                        case "SUMMARY":
+                                $text = $val["value"];
+                                break;
                         case "GPHOTO:ID":
                                 if (!isset($STOP_FLAG)) {
                                         $gphotoid = trim($val["value"]);
@@ -108,7 +114,11 @@ foreach ($vals as $val) {
                 echo "<td align=center class=imagetd>";
                 if ($USE_LIGHTBOX == "TRUE") {
 
-                        echo "<a href='$href' rel='lightbox[this]' title='$ALBUM_TITLE'><img border=0 src='$thumb'></a>\n";
+                        if(isset($text)) {
+                                echo "<a href='$href' rel='lightbox[this]' title='$text'><img border=0 src='$thumb'></a>\n";
+                        } else {
+                                echo "<a href='$href' rel='lightbox[this]' title='$ALBUM_TITLE'><img border=0 src='$thumb'></a>\n";
+                        }
 
                 } else {
 
@@ -134,6 +144,7 @@ foreach ($vals as $val) {
                 unset($href);
                 unset($path);
                 unset($url);
+		unset($text);
         }
 }
 echo "</table>\n";
