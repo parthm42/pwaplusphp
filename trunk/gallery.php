@@ -22,16 +22,16 @@
 require_once("config.php");
 
 #----------------------------------------------------------------------------
-# VARIABLES
-#----------------------------------------------------------------------------
-$file = "http://picasaweb.google.com/data/feed/api/user/" . $PICASAWEB_USER . "/album/" . $LOCATION . "?kind=photo&thumbsize=" . $THUMBSIZE . "&imgmax=" . $IMGMAX;
-
-#----------------------------------------------------------------------------
 # Grab album data from URL
 #----------------------------------------------------------------------------
 $ALBUM = $_REQUEST['album'];
 $LOCATION = str_replace(" ","",$ALBUM);
 list($ALBUM_TITLE,$tags) = split('_',$ALBUM);
+
+#----------------------------------------------------------------------------
+# VARIABLES
+#----------------------------------------------------------------------------
+$file = "http://picasaweb.google.com/data/feed/api/user/" . $PICASAWEB_USER . "/album/" . $LOCATION . "?kind=photo&thumbsize=" . $THUMBSIZE . "&imgmax=" . $IMGMAX;
 
 #----------------------------------------------------------------------------
 # Curl code to store XML data from PWA in a variable
