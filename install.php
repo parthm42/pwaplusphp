@@ -1,3 +1,5 @@
+<?
+
 #==============================================================================================
 # Copyright 2009 Scott McCandless (smccandl@gmail.com)
 #
@@ -13,8 +15,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #==============================================================================================
-
-<?PHP
 
 function get_gdata_token() {
 
@@ -72,6 +72,12 @@ function get_options() {
         echo "</select>\n";
         echo "</td></tr>\n";
 	echo "<tr><td colspan=2><i>Choose whether or not to use <a href='http://www.huddletogether.com/projects/lightbox2/'>Lightbox v2</a>.  It must be installed for this to work. When set to FALSE, full size images are displayed in a pop-up window.</i></td></tr>";
+	echo "<tr><td style='padding-top: 20px; width: 200px;'><strong>Standalone Mode</strong></td><td style='padding-top: 20px;'><select name='sm'>";
+        echo "<option value='TRUE' selected>TRUE</option>";
+        echo "<option value='FALSE'>FALSE</option>";
+        echo "</select>\n";
+        echo "</td></tr>\n";
+        echo "<tr><td colspan=2><i>This option allows you to specify whether this code will run within a CMS (FALSE) or whether the pages will exist outside a CMS (TRUE).  Selecting FALSE suppresses output of &lt;html&gt;, &lt;head&gt; and &lt;body&gt; tags in the source.</i></td></tr>";
 	echo "<tr><td style='padding-top: 20px; width: 200px;'><strong>Require Filter</strong></td><td style='padding-top: 20px;'><select name='rf'>";
         echo "<option value='TRUE'>TRUE</option>";
         echo "<option value='FALSE' selected>FALSE</option>";
@@ -126,12 +132,13 @@ function set_gdata_token() {
 
 function set_options() {
 
-	$un = '$PICASAWEB_USER="' . $_GET['un'] . "\";\n";
-	$ar = '$ALBUMS_PER_ROW="' . $_GET['ar'] . "\";\n";
-	$is = '$IMGMAX="'         . $_GET['is'] . "\";\t\t# Valid values are 800, 720, 640, 576, 512, 400, 320, 288, 200\n";
-	$ts = '$THUMBSIZE="'      . $_GET['ts'] . "\";\t# Valid values are 160, 144, 72, 64, 48, 32\n";
-	$ul = '$USE_LIGHTBOX="'   . $_GET['ul'] . "\";\n";
-	$rf = '$REQUIRE_FILTER="' . $_GET['rf'] . "\";\n";
+	$un = '$PICASAWEB_USER="'  . $_GET['un'] . "\";\n";
+	$ar = '$ALBUMS_PER_ROW="'  . $_GET['ar'] . "\";\n";
+	$is = '$IMGMAX="'          . $_GET['is'] . "\";\t\t# Valid values are 800, 720, 640, 576, 512, 400, 320, 288, 200\n";
+	$ts = '$THUMBSIZE="'       . $_GET['ts'] . "\";\t# Valid values are 160, 144, 72, 64, 48, 32\n";
+	$ul = '$USE_LIGHTBOX="'    . $_GET['ul'] . "\";\n";
+	$rf = '$REQUIRE_FILTER="'  . $_GET['rf'] . "\";\n";
+	$sm = '$STANDALONE_MODE="' . $_GET['sm'] . "\";\n";
 
 	set_config($un);
 	set_config($ar);
@@ -139,6 +146,7 @@ function set_options() {
 	set_config($ts);	
 	set_config($ul);
 	set_config($rf);
+	set_config($sm);
 	set_config("?>\n");
 
 	echo "<strong>Done - saved options. Installation complete. <a href='index.php'>Go to gallery!</a></strong><br /><i>You should rename install.php to prevent others from changing settings.</i>";
