@@ -59,12 +59,21 @@ xml_parse_into_struct($p, $addressData, $vals, $index);
 xml_parser_free($p);
 
 #----------------------------------------------------------------------------
+# Output headers if required
+#----------------------------------------------------------------------------
+if ($STANDALONE_MODE == "TRUE") {
+
+        echo "<html>" . "\n";
+        echo "<head>" . "\n";
+	echo "<title>" . $PICASAWEB_USER . "'s Picasa Galleries</title>" . "\n";
+	echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />" . "\n";
+	echo "</head>" . "\n";
+	echo "<body>" . "\n";
+}
+
+#----------------------------------------------------------------------------
 # Start the output table
 #----------------------------------------------------------------------------
-echo "<html>\n<head>\n";
-echo "<title>" . $PICASAWEB_USER . "'s Picasa Galleries</title>\n";
-echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />\n";
-echo "</head>\n";
 echo "<table cellpadding=0 cellspacing=0 align=center>\n";
 
 #----------------------------------------------------------------------------
@@ -149,6 +158,16 @@ foreach ($vals as $val) {
 	
 	}
 }
-echo "</table></body></html>\n";
+echo "</table>" . "\n";
 unset($title);
+
+#----------------------------------------------------------------------------
+# Output footer if required
+#----------------------------------------------------------------------------
+if ($STANDALONE_MODE == "TRUE") {
+
+        echo "</body>" . "\n";
+        echo "</html>" . "\n";
+}
+
 ?>
