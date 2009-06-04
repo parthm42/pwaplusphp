@@ -55,6 +55,31 @@ xml_parse_into_struct($p, $addressData, $vals, $index);
 xml_parser_free($p);
 
 #----------------------------------------------------------------------------
+# Output headers if required 
+#----------------------------------------------------------------------------
+if ($STANDALONE_MODE == "TRUE") {
+
+	echo "<html>" . "\n";
+	echo "<head>" . "\n";
+	echo "<title>" . $ALBUM_TITLE . "</title>" . "\n";
+	echo "<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" />";
+
+	#----------------------------------------------------------------------------
+	# Scripts and styles for lightbox, if enabled.  Assumes default install in ./
+	#----------------------------------------------------------------------------
+	if ($USE_LIGHTBOX == "TRUE") {
+		echo "<script type=\"text/javascript\" src=\"js/prototype.js\"></script>" . "\n";
+		echo "<script type=\"text/javascript\" src=\"js/scriptaculous.js?load=effects,builder\"></script>" . "\n";
+		echo "<script type=\"text/javascript\" src=\"js/lightbox.js\"></script>" . "\n";
+		echo "<link rel=\"stylesheet\" href=\"css/lightbox.css\" type=\"text/css\" media=\"screen\" />" . "\n";
+	}
+
+	echo "</head>" . "\n";
+	echo "<body>" . "\n";
+
+}
+
+#----------------------------------------------------------------------------
 # Start the output table
 #----------------------------------------------------------------------------
 echo "<table cellpadding=0 cellspacing=0 align=center width=100%>\n";
@@ -149,4 +174,13 @@ foreach ($vals as $val) {
 }
 echo "</table>\n";
 unset($title);
+
+#----------------------------------------------------------------------------
+# Output footer if required
+#----------------------------------------------------------------------------
+if ($STANDALONE_MODE == "TRUE") {
+
+        echo "</body>" . "\n";
+        echo "</html>" . "\n";
+}
 ?>
