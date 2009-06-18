@@ -36,13 +36,15 @@ function get_options() {
 	echo "<table width=700>\n";
 	echo "<tr><td style='padding-top: 20px; width: 200px;'><strong>Picasaweb User</strong></td><td style='padding-top: 20px;'><input type='text' name='un'></td></tr>\n";
 	echo "<tr><td colspan=2><i>Enter your Picasaweb username.  This is the username you use to login to view your albums.</i></td></tr>";
-	echo "<tr><td style='padding-top: 20px; width: 200px;'><strong>Images Per Row</strong></td><td><select name='ar'>";
-	for ($i=1; $i<=10; $i++) {
-		echo "<option value='$i'>$i</option>";
-	}
-        echo "</select>\n";
-	echo "</td></tr>\n";
 	echo "<tr><td colspan=2><i>Set the number of images (albums and thumbnails) to display per row.</i></td></tr>";
+	echo "<tr><td style='padding-top: 20px; width: 200px;'><strong>Images Per Page</strong></td><td><select name='ip'>";
+        for ($i=0; $i<=10; $i++) {
+		$val = $i * 5;
+                echo "<option value='$val'>$val</option>";
+        }
+        echo "</select>\n";
+        echo "</td></tr>\n";
+        echo "<tr><td colspan=2><i>Set the number of thumbnails to display per page. Value of 0 means don't paginate.</i></td></tr>";
 	echo "<tr><td style='padding-top: 20px; width: 200px;'><strong>Image Size (imgmax)</strong></td><td style='padding-top: 20px;'><select name='is'>";
 	echo "<option value='800'>800</option>";
 	echo "<option value='720'>720</option>";
@@ -133,20 +135,20 @@ function set_gdata_token() {
 function set_options() {
 
 	$un = '$PICASAWEB_USER="'  . $_GET['un'] . "\";\n";
-	$ar = '$ALBUMS_PER_ROW="'  . $_GET['ar'] . "\";\n";
 	$is = '$IMGMAX="'          . $_GET['is'] . "\";\t\t# Valid values are 800, 720, 640, 576, 512, 400, 320, 288, 200\n";
 	$ts = '$THUMBSIZE="'       . $_GET['ts'] . "\";\t# Valid values are 160, 144, 72, 64, 48, 32\n";
 	$ul = '$USE_LIGHTBOX="'    . $_GET['ul'] . "\";\n";
 	$rf = '$REQUIRE_FILTER="'  . $_GET['rf'] . "\";\n";
 	$sm = '$STANDALONE_MODE="' . $_GET['sm'] . "\";\n";
+	$ip = '$IMAGES_PER_PAGE="' . $_GET['ip'] . "\";\n";
 
 	set_config($un);
-	set_config($ar);
 	set_config($is);
 	set_config($ts);	
 	set_config($ul);
 	set_config($rf);
 	set_config($sm);
+	set_config($ip);
 	set_config("?>\n");
 
 	echo "<strong>Done - saved options. Installation complete. <a href='index.php'>Go to gallery!</a></strong><br /><i>You should rename install.php to prevent others from changing settings.</i>";
