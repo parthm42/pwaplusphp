@@ -29,9 +29,36 @@ $LOCATION = str_replace(" ","",$ALBUM);
 list($ALBUM_TITLE,$tags) = split('_',$ALBUM);
 
 #----------------------------------------------------------------------------
-# VARIABLES
+# Check for required variables from config file
 #----------------------------------------------------------------------------
-$file = "http://picasaweb.google.com/data/feed/api/user/" . $PICASAWEB_USER . "/album/" . $LOCATION . "?kind=photo&thumbsize=" . $THUMBSIZE . "&imgmax=" . $IMGMAX;
+if ( (!isset($GDATA_TOKEN)) || (!isset($PICASAWEB_USER)) || (!isset($IMGMAX)) || (!isset($THUMBSIZE)) || (!isset($USE_LIGHTBOX)) || (!isset($REQUIRE_FILTER)) || (!isset($STANDALONE_MODE)) || (!isset($IMAGES_PER_PAGE)) ) {
+
+	echo "<h1>Error: One or more required variables is missing from config.php!</h1><h3>Please re-run the install.php configuration script.</h3>";
+	exit;
+}
+
+#----------------------------------------------------------------------------
+# VARIABLES FOR PAGINATION
+#----------------------------------------------------------------------------
+if ($IMAGES_PER_PAGE == 0) {
+
+	$file = "http://picasaweb.google.com/data/feed/api/user/" . $PICASAWEB_USER . "/album/" . $LOCATION . "?kind=photo&thumbsize=" . $THUMBSIZE . "&imgmax=" . $IMGMAX;
+
+} else {
+
+	$page = $_GET['page'];
+	if (!(isset($page))) {
+		$page = 1;
+	}
+	if ($page > 1) {
+		$start_image_index = (($page - 1) * $IMAGES_PER_PAGE) + 1;
+	} else {
+		$start_image_index = 1;
+	}
+
+	$file = "http://picasaweb.google.com/data/feed/api/user/" . $PICASAWEB_USER . "/album/" . $LOCATION . "?kind=photo&thumbsize=" . $THUMBSIZE . "&imgmax=" . $IMGMAX . "&max-results=" . $IMAGES_PER_PAGE . "&start-index=" . $start_image_index;
+
+}
 
 #----------------------------------------------------------------------------
 # Curl code to store XML data from PWA in a variable
@@ -68,21 +95,16 @@ if ($STANDALONE_MODE == "TRUE") {
 	# Scripts and styles for lightbox, if enabled.  Assumes default install in ./
 	#----------------------------------------------------------------------------
 	if ($USE_LIGHTBOX == "TRUE") {
-		echo "<script type=\"text/javascript\" src=\"js/prototype.js\"></script>" . "\n";
-		echo "<script type=\"text/javascript\" src=\"js/scriptaculous.js?load=effects,builder\"></script>" . "\n";
-		echo "<script type=\"text/javascript\" src=\"js/lightbox.js\"></script>" . "\n";
-		echo "<link rel=\"stylesheet\" href=\"css/lightbox.css\" type=\"text/css\" media=\"screen\" />" . "\n";
+		echo "<script type=\"text/javascript\" src=\"js/prototype.js\"></script>";
+		echo "<script type=\"text/javascript\" src=\"js/scriptaculous.js?load=effects,builder\"></script>";
+		echo "<script type=\"text/javascript\" src=\"js/lightbox.js\"></script>";
+		echo "<link rel=\"stylesheet\" href=\"css/lightbox.css\" type=\"text/css\" media=\"screen\" />";
 	}
 
 	echo "</head>" . "\n";
 	echo "<body>" . "\n";
 
 }
-
-#----------------------------------------------------------------------------
-# Start the output table
-#----------------------------------------------------------------------------
-echo "<table cellpadding=0 cellspacing=0 align=center width=100%>\n";
 
 #----------------------------------------------------------------------------
 # Iterate over the array and extract the info we want
@@ -92,6 +114,7 @@ unset($title);
 unset($href);
 unset($path);
 unset($url);
+$image_count=0;
 foreach ($vals as $val) {
 
         switch ($val["tag"]) {
@@ -115,6 +138,9 @@ foreach ($vals as $val) {
                         case "SUMMARY":
                                 $text = $val["value"];
                                 break;
+			case "GPHOTO:NUMPHOTOS":
+				$numphotos = $val["value"];
+				break;
                         case "GPHOTO:ID":
                                 if (!isset($STOP_FLAG)) {
                                         $gphotoid = trim($val["value"]);
@@ -126,23 +152,23 @@ foreach ($vals as $val) {
         # Once we have all the pieces of info we want, dump the output
         #----------------------------------------------------------------------------
         if (isset($thumb) && isset($title) && isset($href) && isset($gphotoid)) {
+
                 if ($STOP_FLAG != 1) {
                         $ALBUMS_PER_ROW_LESS_ONE = $ALBUMS_PER_ROW - 1;
-                        echo "<tr><td colspan=$ALBUMS_PER_ROW_LESS_ONE style=\"padding-bottom: 10px;\"><h2>$ALBUM_TITLE</h2></td></tr>\n";
+                        echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='index.php'>...back to album list</a></p><br></div>\n";
                         $STOP_FLAG=1;
                 }
                 $count++;
-                if ($count == 1) {
-                        echo "<tr>\n";
-                }
 
-                echo "<td align=center class=imagetd>";
+                echo "<div class='thumbnail'>";
                 if ($USE_LIGHTBOX == "TRUE") {
 
+			$text = addslashes($text);
+
                         if(isset($text)) {
-                                echo "<a href='$href' rel='lightbox[this]' title='$text'><img border=0 src='$thumb'></a>\n";
+                                echo "<a href=\"$href\" rel=\"lightbox[this]\" title=\"$text\"><img border=0 src='$thumb'></a>\n";
                         } else {
-                                echo "<a href='$href' rel='lightbox[this]' title='$ALBUM_TITLE'><img border=0 src='$thumb'></a>\n";
+                                echo "<a href=\"$href\" rel=\"lightbox[this]\" title=\"$ALBUM_TITLE\"><img border=0 src='$thumb'></a>\n";
                         }
 
                 } else {
@@ -151,15 +177,7 @@ foreach ($vals as $val) {
                         echo "<a href='#' onclick=\"$newhref\"><img border=0 src='$thumb'></a>\n";
 
                 }
-                echo "</td>";
-
-                #----------------------------------
-                # End the row and restart the count
-                #----------------------------------
-                if ($count == $ALBUMS_PER_ROW) {
-                        echo "</tr>\n";
-                        $count=0;
-                }
+                echo "</div>";
 
                 #----------------------------------
                 # Reset the variables
@@ -170,9 +188,37 @@ foreach ($vals as $val) {
                 unset($path);
                 unset($url);
 		unset($text);
+
         }
 }
-echo "</table>\n";
+
+#----------------------------------------------------------------------------
+# Show output for pagination
+#----------------------------------------------------------------------------
+if ($IMAGES_PER_PAGE != 0) {
+
+	echo "<div id='pages'>";
+	$paginate = ($numphotos/$IMAGES_PER_PAGE) + 1;
+	echo "Page: ";
+
+	# List pages
+	for ($i=1; $i<$paginate; $i++) {
+
+		$link_image_index=($i - 1) * ($IMAGES_PER_PAGE + 1);
+		$href = "gallery.php?album=$ALBUM&page=$i";
+
+		# Show current page
+		if ($i == $page) {
+			echo "<span class='current_page'>$i </span>";
+		} else {
+			echo "<a class='page_link' href='$href'>$i</a> ";
+		}
+	}
+
+	echo "</div>";
+
+}
+
 unset($title);
 
 #----------------------------------------------------------------------------
