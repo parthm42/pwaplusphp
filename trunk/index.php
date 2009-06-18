@@ -21,6 +21,14 @@
 #----------------------------------------------------------------------------
 require_once("config.php");
 
+#----------------------------------------------------------------------------
+# Check for required variables from config file
+#----------------------------------------------------------------------------
+if ( (!isset($GDATA_TOKEN)) || (!isset($PICASAWEB_USER)) || (!isset($IMGMAX)) || (!isset($THUMBSIZE)) || (!isset($USE_LIGHTBOX)) || (!isset($REQUIRE_FILTER)) || (!isset($STANDALONE_MODE)) || (!isset($IMAGES_PER_PAGE)) ) {
+
+        echo "<h1>Error: One or more required variables is missing from config.php!</h1><h3>Please re-run the install.php configuration script.</h3>";
+        exit;
+}
 
 #----------------------------------------------------------------------------
 # VARIABLES
@@ -70,11 +78,6 @@ if ($STANDALONE_MODE == "TRUE") {
 	echo "</head>" . "\n";
 	echo "<body>" . "\n";
 }
-
-#----------------------------------------------------------------------------
-# Start the output table
-#----------------------------------------------------------------------------
-echo "<table cellpadding=0 cellspacing=0 align=center>\n";
 
 #----------------------------------------------------------------------------
 # Iterate over the array and extract the info we want
@@ -127,25 +130,15 @@ foreach ($vals as $val) {
 		}
 		
 		if ($pos == 0) {
-			$count++;
-			if ($count == 1) {
-				echo "<tr>\n";
-			}
-			list($disp_name,$tags) = split('_',$title);
-			echo "<td><table cellpadding=0 cellspacing=0>\n";
-			echo "<tr><td class=imagetd>\n";
-			echo "<a href='gallery.php?album=$title'><img border=0 src='$thumb'></a>";
-			echo "</td></tr><tr><td valign=top class=titletd>";
-			echo "<a href='gallery.php?album=$title'>$disp_name</a><BR><i><font size=-1>$published, $num images</font></i>\n";
-			echo "</td></tr></table></td>\n";
 
-			#----------------------------------
-			# End the row and restart the count
-			#----------------------------------
-			if ($count == $ALBUMS_PER_ROW) {
-				echo "</tr>\n";
-				$count=0;
-			}
+			list($disp_name,$tags) = split('_',$title);
+			echo "<div class='thumbnail'>\n";
+			echo "<a href='gallery.php?album=$title'><img border=0 src='$thumb'></a>";
+			echo "<p class=titlepg>";
+			echo "<a href='gallery.php?album=$title'>$disp_name</a></p>\n";
+			echo "<p class=titlestats>$published, $num images</p>\n";
+			echo "</div>\n";
+
 		}
 			#----------------------------------
 			# Reset the variables
@@ -158,7 +151,6 @@ foreach ($vals as $val) {
 	
 	}
 }
-echo "</table>" . "\n";
 unset($title);
 
 #----------------------------------------------------------------------------
