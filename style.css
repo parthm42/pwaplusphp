@@ -1,3 +1,25 @@
-img { border-style: solid; border-width: 1px; border-color: #000; }
-.imagetd { padding-top: 20px; padding-right: 20px; }
-.titletd { font-size: 13px; }
+h2 	{ padding: 0px; margin: 0px;}
+a       { text-decoration: none; color: #000;}
+a:hover { text-decoration: underline; }
+img 	{ padding: 5px; margin: 0px; background: #f1f1f1; border-style: solid; border-width: 1px; border-color: #CCC; }
+p	{ padding: 0px; margin: 0px; }
+
+#pages {
+	padding-top:   	20px;
+	padding-bottom:	10px;
+	width: 		100%;
+	float: 		right;
+	font-size:	12px;
+}
+
+#title {
+
+	width: 		100%; 
+
+}
+
+.current_page 	{ font-weight: bold; }
+.back_to_list 	{ padding: 0px; margin: 0px; font-style: italic; font-size: 11px; color: #5c5c5c; }
+.titlepg	{ font-size: 13px; color: #808080; padding: 5px 0px 0px 2px; margin: 0px; }
+.titlestats	{ font-size: 11px; color: #808080; padding: 0px 0px 10px 2px; margin: 0px; font-style: italic;}
+.thumbnail 	{ float: left; padding: 5px; }
