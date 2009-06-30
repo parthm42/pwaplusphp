@@ -1,10 +1,10 @@
 #summary Installation
 
-= Introduction =
+== Introduction ==
 
 This page describes the installation process for PWA+PHP in both standalone and non-standalone configurations.
 
-= Procedure For Standalone Installation =
+== Procedure For Standalone Installation ==
 
   # Unzip the archive you downloaded under the public_html folder on your webserver
 {{{
@@ -24,3 +24,21 @@ If this is correct, Login to your Google Account
   # Click the link to login and then you should see a page from google asking you to Grant or Deny access.
   # Click Grant and the token you just generated will be displayed and saved to the config file
   # Click the link to continue to the next step and set your preferences
+
+== Additional Steps For Non-Standalone Installation ==
+
+If you want to include this php script within another PHP code via the include() function or if you want to embed the code within a CMS, like Drupal, you'll need to modify the code a bit.  See below.
+
+  # Ensure `$STANDALONE_MODE=TRUE` in the config.php
+  # Rename index.php to something less popular, like albums.php and update line 159 in gallery.php to point to the new name, replacing index.php on that line with the new name.
+{{{159:                        echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='index.php'>...back to album list</a></p><p>&nbsp;</p>\n";}}}
+  # Update lines 137 and 139 in index.php (which you renamed) to point to the embedded or included location of gallery.php.
+{{{
+137:			echo "<a href='gallery.php?album=$title'><img alt='image_from_picasa' src='$thumb'></img></a>";
+139:			echo "<a href='gallery.php?album=$title'>$disp_name</a></p>\n";
+}}}
+  For example, if you're using Drupal and gallery.php is included on the page with id "node/3", your updated line 137 would look like:
+{{{
+echo "<a href='?q=node/3&album=$title'><img alt='image_from_picasa' src='$thumb'></img></a>";
+}}}
+  ...because drupal URLs have the form "http://example.com/?q=node/3".
