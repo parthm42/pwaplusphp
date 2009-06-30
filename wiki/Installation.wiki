@@ -33,7 +33,7 @@ If you want to include this php script within another PHP code via the include()
   * Copy the entire contents of config.php into the top of both index.php and gallery.php
   * Rename index.php to something less popular, like albums.php and update line 159 in gallery.php to point to the new name, replacing index.php on that line with the new name.
 {{{
-159:                        echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='index.php'>...back to album list</a></p><p>&nbsp;</p>\n";
+159:                 echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='index.php'>...back to album list</a></p><p>&nbsp;</p>\n";
 }}}
   * Update lines 137 and 139 in index.php (which you renamed) to point to the embedded or included location of gallery.php.
 {{{
