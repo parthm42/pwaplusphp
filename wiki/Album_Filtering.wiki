@@ -1,0 +1,17 @@
+#summary This page describes how to setup album filtering using keywords in the URL.
+
+== Introduction ==
+
+PWA+PHP allows you to display only certain albums by specifying filter text as a keyword in the URL.  This allows you to group your albums and display similar albums on the same page.  If you're embedding the code within a CMS, you can even allow certain users to view some of your albums while preventing their access to other albums.
+
+== Procedure ==
+
+For example, let's say you have a Picasa album called "Halloween Party" and you want to display it only to your friends.  
+
+  * Login to PicasaWeb Albums and edit the title of this album so it reads "Halloween Party _Friends".
+  * Provide the following URL to your friends:
+    http://yoursite.com/pictures/galleries.php?filter=_Friends
+
+When they click this link, they'll see all your albums where you've included that keyword as part of the title.
+
+For enhanced security, you can hard-code the keyword into the gallery.php script, preventing users from specifying other keywords and gaining access to albums you don't want them to see.
