@@ -8,9 +8,9 @@ PWA+PHP allows you to display only certain albums by specifying filter text as a
 
 For example, let's say you have a Picasa album called "Halloween Party" and you want to display it only to your friends.  
 
-  * Login to PicasaWeb Albums and edit the title of this album so it reads "Halloween Party _Friends".
+  * Login to PicasaWeb Albums and edit the title of this album so it reads "Halloween Party `_`Friends".
   * Provide the following URL to your friends:
-    http://yoursite.com/pictures/galleries.php?filter=_Friends
+    http://yoursite.com/pictures/gallery.php?filter=_Friends
 
 When they click this link, they'll see all your albums where you've included that keyword as part of the title.
 
