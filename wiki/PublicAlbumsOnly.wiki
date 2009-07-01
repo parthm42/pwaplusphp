@@ -1,0 +1,17 @@
+#summary This page describes how to use the code to display only public albums.
+
+== Introduction ==
+
+If you want, you can modify the code so that it will only display public albums and then you can specify any PicasaWeb username to display that user's public albums on your page.  The procedure below explains how to accomplish that.
+
+== Procedure ==
+
+  * Change the PICASAWEB_USER variable in config.php and comment out the following lines in index.php:
+
+{{{
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Authorization: AuthSub token="' . $GDATA_TOKEN . '"'
+ )); 
+}}}
+
+At this point, you should see the public albums of whichever user you specified in the variable above.
