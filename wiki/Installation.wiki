@@ -1,8 +1,4 @@
-#summary Installation
-
-== Introduction ==
-
-This page describes the installation process for PWA+PHP in both standalone and non-standalone configurations.
+#summary This page describes the installation process for PWA+PHP in both standalone and non-standalone configurations.
 
 == Procedure For Standalone Installation ==
 
