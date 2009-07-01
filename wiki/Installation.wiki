@@ -31,7 +31,7 @@ If you want to include this php script within another PHP code via the include()
 
   * Ensure `$STANDALONE_MODE=TRUE` in the config.php
   * Copy the entire contents of config.php into the top of both index.php and gallery.php
-  * Rename index.php to something less popular, like albums.php and update line 159 in gallery.php to point to the new name, replacing index.php on that line with the new name.
+  * Rename index.php to something less popular, like albums.php and update line 159 and 209 in gallery.php to point to the new name, replacing index.php on that line with the new name.
 {{{
 159:                    echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='index.php'>...back to album list</a></p><p>&nbsp;</p>\n";
 }}}
@@ -45,3 +45,7 @@ If you want to include this php script within another PHP code via the include()
 echo "<a href='?q=node/3&album=$title'><img alt='image_from_picasa' src='$thumb'></img></a>";
 }}}
   ...because drupal URLs have the form "http://example.com/?q=node/3".
+  * Update line 209 in gallery.php to point to the same location as the previous step, for pagination.
+{{{
+209:		       $href = "gallery.php?album=$ALBUM&page=$i";
+}}}
