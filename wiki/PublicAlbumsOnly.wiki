@@ -6,7 +6,7 @@ If you want, you can modify the code so that it will only display public albums 
 
 == Procedure ==
 
-  * Change the PICASAWEB_USER variable in config.php and comment out the following lines in index.php:
+Change the PICASAWEB_USER variable in config.php and comment out the following lines in index.php:
 
 {{{
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
