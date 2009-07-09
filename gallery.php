@@ -20,6 +20,7 @@
 # CONFIGURATION
 #----------------------------------------------------------------------------
 require_once("config.php");
+$back_link = "index.php";	  # Name of the file that displays all albums
 
 #----------------------------------------------------------------------------
 # Grab album data from URL
@@ -86,7 +87,8 @@ xml_parser_free($p);
 #----------------------------------------------------------------------------
 if ($STANDALONE_MODE == "TRUE") {
 
-	echo "<html>" . "\n";
+	echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n";
+        echo "<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\n";
 	echo "<head>" . "\n";
 	echo "<title>" . $ALBUM_TITLE . "</title>" . "\n";
 	echo "<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" />";
@@ -155,7 +157,7 @@ foreach ($vals as $val) {
 
                 if ($STOP_FLAG != 1) {
                         $ALBUMS_PER_ROW_LESS_ONE = $ALBUMS_PER_ROW - 1;
-                        echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='index.php'>...back to album list</a></p><br></div>\n";
+                        echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='" . $back_link . "'>...back to album list</a></p><p>&nbsp;</p>\n";
                         $STOP_FLAG=1;
                 }
                 $count++;
@@ -166,15 +168,15 @@ foreach ($vals as $val) {
 			$text = addslashes($text);
 
                         if(isset($text)) {
-                                echo "<a href=\"$href\" rel=\"lightbox[this]\" title=\"$text\"><img border=0 src='$thumb'></a>\n";
+                                echo "<a href=\"$href\" rel=\"lightbox[this]\" title=\"$text\"><img src='$thumb' alt='image_from_picasa'></img></a>\n";
                         } else {
-                                echo "<a href=\"$href\" rel=\"lightbox[this]\" title=\"$ALBUM_TITLE\"><img border=0 src='$thumb'></a>\n";
+                                echo "<a href=\"$href\" rel=\"lightbox[this]\" title=\"$ALBUM_TITLE\"><img src='$thumb' alt='image_from_picasa'></img></a>\n";
                         }
 
                 } else {
 
                         $newhref="window.open('$href', 'mywindow','scrollbars=0, width=$imgwd,height=$imght');";
-                        echo "<a href='#' onclick=\"$newhref\"><img border=0 src='$thumb'></a>\n";
+                        echo "<a href='#' onclick=\"$newhref\"><img src='$thumb' alt='image_from_picasa'></img></a>\n";
 
                 }
                 echo "</div>";
