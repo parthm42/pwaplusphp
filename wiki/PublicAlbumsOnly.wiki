@@ -6,6 +6,11 @@ If you want, you can modify the code so that it will only display public albums 
 
 == Procedure ==
 
+===For v1.5+===
+
+Set the variable $PUBLIC_ONLY=TRUE in config.php and specify the user whose albums you wish to embed using the PICASAWEB_USER variable.
+
+=== For v1.4 ====
 Change the PICASAWEB_USER variable in config.php and comment out the following lines in index.php:
 
 {{{
