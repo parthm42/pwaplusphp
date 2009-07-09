@@ -20,6 +20,7 @@
 # CONFIGURATION
 #----------------------------------------------------------------------------
 require_once("config.php");
+$action = "gallery.php";	   # Name of the page that displays galleries
 
 #----------------------------------------------------------------------------
 # Check for required variables from config file
@@ -43,6 +44,7 @@ if ($REQUIRE_FILTER != "FALSE") {
 $ALL = $_REQUEST['all'];
 if ($ALL == "") { $ALL = 0; }
 
+
 $file = "http://picasaweb.google.com/data/feed/api/user/" . $PICASAWEB_USER . "?kind=album";
 
 #----------------------------------------------------------------------------
@@ -53,9 +55,14 @@ $timeout = 0; // set to zero for no timeout
 curl_setopt($ch, CURLOPT_URL, $file);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'Authorization: AuthSub token="' . $GDATA_TOKEN . '"'
-  ));
+
+# Display only public albums if PUBLIC_ONLY=TRUE in config.php
+if ($PUBLIC_ONLY == "FALSE") {
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    		'Authorization: AuthSub token="' . $GDATA_TOKEN . '"'
+  	));
+}
+
 $addressData = curl_exec($ch);
 curl_close($ch);
 
@@ -71,7 +78,8 @@ xml_parser_free($p);
 #----------------------------------------------------------------------------
 if ($STANDALONE_MODE == "TRUE") {
 
-        echo "<html>" . "\n";
+	echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n";
+        echo "<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\n";
         echo "<head>" . "\n";
 	echo "<title>" . $PICASAWEB_USER . "'s Picasa Galleries</title>" . "\n";
 	echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />" . "\n";
@@ -94,6 +102,9 @@ foreach ($vals as $val) {
 			case "MEDIA:THUMBNAIL":
 				$thumb = trim($val["attributes"]["URL"] . "\n");
 				break;	
+			case "MEDIA:DESCRIPTION":
+				$desc = trim($val["value"] . "\n");
+				break;
                         case "MEDIA:TITLE":
                                 $title = trim($val["value"]);
                                 break;
@@ -104,6 +115,9 @@ foreach ($vals as $val) {
                                 break;
                         case "GPHOTO:NUMPHOTOS":
                                 $num = trim($val["value"]);
+                                break;
+			case "GPHOTO:LOCATION":
+                                $loc = trim($val["value"]);
                                 break;
 			case "PUBLISHED":
                                 $published = trim($val["value"]);
@@ -131,12 +145,34 @@ foreach ($vals as $val) {
 		
 		if ($pos == 0) {
 
+			if ($SHOW_ALBUM_DETAILS=="FALSE") {
+				$thumbwidth = $THUMBSIZE + ($THUMBSIZE * .2);
+			} else {
+				$thumbwidth = $THUMBSIZE + 200;
+				$galdatasize= $THUMBSIZE * 1.10;
+			}
+
 			list($disp_name,$tags) = split('_',$title);
-			echo "<div class='thumbnail'>\n";
-			echo "<a href='gallery.php?album=$title'><img border=0 src='$thumb'></a>";
-			echo "<p class=titlepg>";
-			echo "<a href='gallery.php?album=$title'>$disp_name</a></p>\n";
-			echo "<p class=titlestats>$published, $num images</p>\n";
+
+			echo "<div class='thumbnail' style='width: " . $thumbwidth . "px;'>\n";
+			echo "<div class='thumbimage' style='width: " . $THUMBSIZE . "px;'>\n";
+				echo "<a href='" . $action . "?album=$title'><img alt='image_from_picasa' src='$thumb'></img></a>\n";
+			echo "</div>\n";
+			echo "<div class='galdata' style='width: " . $galdatasize . "px;'>\n";
+
+				echo "<p class='titlepg'><a href='" .$action . "?album=$title'>$disp_name</a></p>\n";
+				echo "<p class='titlestats'>$published, $num images</p>\n";
+				if ($SHOW_ALBUM_DETAILS == "TRUE") {
+					if ($desc != "") { 
+						echo "<p class='albumdesc'>$desc</p>\n";
+					}
+					if ($loc != "") {
+						echo "<p class='location'>Location: $loc</p>\n";
+					}
+				
+				}
+
+			echo "</div>";
 			echo "</div>\n";
 
 		}
