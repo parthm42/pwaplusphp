@@ -20,6 +20,7 @@
 # CONFIGURATION
 #----------------------------------------------------------------------------
 require_once("config.php");
+$action = "gallery.php";          # Name of the page that displays galleries
 $back_link = "index.php";	  # Name of the file that displays all albums
 
 #----------------------------------------------------------------------------
@@ -207,7 +208,7 @@ if ($IMAGES_PER_PAGE != 0) {
 	for ($i=1; $i<$paginate; $i++) {
 
 		$link_image_index=($i - 1) * ($IMAGES_PER_PAGE + 1);
-		$href = "gallery.php?album=$ALBUM&page=$i";
+		$href = $action . "?album=$ALBUM&page=$i";
 
 		# Show current page
 		if ($i == $page) {
