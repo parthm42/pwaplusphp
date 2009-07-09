@@ -31,17 +31,20 @@ If you want to include this php script within another PHP code via the include()
 {{{
 159:                    echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='index.php'>...back to album list</a></p><p>&nbsp;</p>\n";
 }}}
-  * Update lines 137 and 139 in index.php (which you renamed) to point to the embedded or included location of gallery.php.
+  * Update lines 23 in index.php (which you renamed) to point to the embedded or included location of gallery.php.
 {{{
-137:			echo "<a href='gallery.php?album=$title'><img alt='image_from_picasa' src='$thumb'></img></a>";
-139:			echo "<a href='gallery.php?album=$title'>$disp_name</a></p>\n";
+23:			$action = "gallery.php";
 }}}
-  For example, if you're using Drupal and gallery.php is included on the page with id "node/3", your updated line 137 would look like:
+  For example, if you're using Drupal and gallery.php is included on the page with id "node/3", your updated line 23 would look like:
 {{{
-echo "<a href='?q=node/3&album=$title'><img alt='image_from_picasa' src='$thumb'></img></a>";
+$action="?q=node/3";
 }}}
   ...because drupal URLs have the form "http://example.com/?q=node/3".
-  * Update line 209 in gallery.php to point to the same location as the previous step, for pagination.
+  * Update line 23 in gallery.php to point to the same location as the previous step, for pagination.
 {{{
-209:		       $href = "gallery.php?album=$ALBUM&page=$i";
+23:		       $action="?q=node/3";
+}}}
+ * Update line 24 in gallery.php to point to the new name of index.php, for links back to the main page.
+{{{
+24:		       $back_link="albums.php";
 }}}
