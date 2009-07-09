@@ -1,0 +1,9 @@
+#summary This page explains how to enable the detailed layout.
+
+= Introduction =
+
+There are two main page layouts available starting with version 1.5.  The compact or simple layout shows the gallery thumbnail with the title, the date and the number of images underneath the thumbnail.  The detailed layout shows the thumbnail with the title, date, number of images, gallery description and location to the right of the thumbnail.
+
+= Procedure =
+
+To enable the detailed layout, set $SHOW_ALBUM_DETAILS=TRUE in config.php.
