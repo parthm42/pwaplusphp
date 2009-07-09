@@ -86,6 +86,18 @@ function get_options() {
         echo "</select>\n";
         echo "</td></tr>\n";
         echo "<tr><td colspan=2><i>Set this to FALSE unless you want to *require* a search filter in the URL -- you can still filter albums with this set to FALSE.  Setting to TRUE *requires* a filter string in the URL to prevent certain users from seeing certain albums.</i></td></tr>";
+	echo "<tr><td style='padding-top: 20px; width: 200px;'><strong>Public Albums Only</strong></td><td style='padding-top: 20px;'><select name='po'>";
+        echo "<option value='TRUE'>TRUE</option>";
+        echo "<option value='FALSE' selected>FALSE</option>";
+        echo "</select>\n";
+        echo "</td></tr>\n";
+        echo "<tr><td colspan=2><i>This option allows you to specify whether to display only public or both public and private albums of the user specified above. </i></td></tr>";
+	echo "<tr><td style='padding-top: 20px; width: 200px;'><strong>Album Details</strong></td><td style='padding-top: 20px;'><select name='ad'>";
+        echo "<option value='TRUE'>TRUE</option>";
+        echo "<option value='FALSE' selected>FALSE</option>";
+        echo "</select>\n";
+        echo "</td></tr>\n";
+        echo "<tr><td colspan=2><i>This option allows you to choose whether or not to display album details on the index page.  Selecting TRUE sets the detailed layout and selecting FALSE sets the simple layout.</i></td></tr>";
 	echo "</table>\n";
 	echo "<input type='hidden' name='loc' value='finish'>";
 	echo "<tr><td colspan=2 style='padding-top: 20px;'><input style='padding: 10px; margin-top: 20px;' type='submit' value='Finish'></td></tr>";
@@ -134,13 +146,15 @@ function set_gdata_token() {
 
 function set_options() {
 
-	$un = '$PICASAWEB_USER="'  . $_GET['un'] . "\";\n";
-	$is = '$IMGMAX="'          . $_GET['is'] . "\";\t\t# Valid values are 800, 720, 640, 576, 512, 400, 320, 288, 200\n";
-	$ts = '$THUMBSIZE="'       . $_GET['ts'] . "\";\t# Valid values are 160, 144, 72, 64, 48, 32\n";
-	$ul = '$USE_LIGHTBOX="'    . $_GET['ul'] . "\";\n";
-	$rf = '$REQUIRE_FILTER="'  . $_GET['rf'] . "\";\n";
-	$sm = '$STANDALONE_MODE="' . $_GET['sm'] . "\";\n";
-	$ip = '$IMAGES_PER_PAGE="' . $_GET['ip'] . "\";\n";
+	$un = '$PICASAWEB_USER="'  	. $_GET['un'] . "\";\n";
+	$is = '$IMGMAX="'          	. $_GET['is'] . "\";\t\t# Valid values are 800, 720, 640, 576, 512, 400, 320, 288, 200\n";
+	$ts = '$THUMBSIZE="'       	. $_GET['ts'] . "\";\t# Valid values are 160, 144, 72, 64, 48, 32\n";
+	$ul = '$USE_LIGHTBOX="'    	. $_GET['ul'] . "\";\n";
+	$rf = '$REQUIRE_FILTER="'  	. $_GET['rf'] . "\";\n";
+	$sm = '$STANDALONE_MODE="' 	. $_GET['sm'] . "\";\n";
+	$ip = '$IMAGES_PER_PAGE="' 	. $_GET['ip'] . "\";\n";
+	$po = '$PUBLIC_ONLY="'	   	. $_GET['po'] . "\";\n";
+	$ad = '$SHOW_ALBUM_DETAILS="'    . $_GET['ad'] . "\";\n";
 
 	set_config($un);
 	set_config($is);
@@ -149,6 +163,8 @@ function set_options() {
 	set_config($rf);
 	set_config($sm);
 	set_config($ip);
+	set_config($po);
+	set_config($ad);
 	set_config("?>\n");
 
 	echo "<strong>Done - saved options. Installation complete. <a href='index.php'>Go to gallery!</a></strong><br /><i>You should rename install.php to prevent others from changing settings.</i>";
