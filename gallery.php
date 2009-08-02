@@ -27,8 +27,9 @@ $back_link = "index.php";	  # Name of the file that displays all albums
 # Grab album data from URL
 #----------------------------------------------------------------------------
 $ALBUM = $_REQUEST['album'];
-$LOCATION = str_replace(" ","",$ALBUM);
+$LOCATION = str_replace("|","",$ALBUM);
 list($ALBUM_TITLE,$tags) = split('_',$ALBUM);
+$ALBUM_TITLE=str_replace("|"," ",$ALBUM);
 
 #----------------------------------------------------------------------------
 # Check for required variables from config file
@@ -44,7 +45,7 @@ if ( (!isset($GDATA_TOKEN)) || (!isset($PICASAWEB_USER)) || (!isset($IMGMAX)) ||
 #----------------------------------------------------------------------------
 if ($IMAGES_PER_PAGE == 0) {
 
-	$file = "http://picasaweb.google.com/data/feed/api/user/" . $PICASAWEB_USER . "/album/" . $LOCATION . "?kind=photo&thumbsize=" . $THUMBSIZE . "&imgmax=" . $IMGMAX;
+	$file = "http://picasaweb.google.com/data/feed/api/user/" . $PICASAWEB_USER . "/album/" . $LOCATION . "?kind=photo&thumbsize=" . $THUMBSIZE . "c&imgmax=" . $IMGMAX;
 
 } else {
 
@@ -168,7 +169,7 @@ foreach ($vals as $val) {
 
 			$text = addslashes($text);
 
-                        if(isset($text)) {
+                        if($text != "") {
                                 echo "<a href=\"$href\" rel=\"lightbox[this]\" title=\"$text\"><img src='$thumb' alt='image_from_picasa'></img></a>\n";
                         } else {
                                 echo "<a href=\"$href\" rel=\"lightbox[this]\" title=\"$ALBUM_TITLE\"><img src='$thumb' alt='image_from_picasa'></img></a>\n";
