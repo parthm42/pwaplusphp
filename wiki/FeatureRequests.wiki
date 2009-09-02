@@ -1,6 +1,0 @@
-#summary Feature requests submitted by users.
-#labels Featured
-
-===To submit a feature request...===
-
-Simply post your request using the comments form below.                                              
