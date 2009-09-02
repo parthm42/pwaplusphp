@@ -1,0 +1,8 @@
+#summary Procedure for submitting feature and enhancement requests.
+#labels Featured
+
+= Introduction =
+
+To submit an enhancement request, click on the issues tab, select the 'Enhancement Request' template and fill out the form.  You can also open a new request by clicking the link below:
+
+http://code.google.com/p/pwaplusphp/issues/entry?template=Enhancement%20Request
