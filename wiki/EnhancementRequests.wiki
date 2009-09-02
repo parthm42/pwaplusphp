@@ -1,7 +1,7 @@
 #summary Procedure for submitting feature and enhancement requests.
 #labels Featured
 
-= Introduction =
+=== Introduction ===
 
 To submit an enhancement request, click on the issues tab, select the 'Enhancement Request' template and fill out the form.  You can also open a new request by clicking the link below:
 
