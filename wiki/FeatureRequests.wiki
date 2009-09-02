@@ -1,6 +1,6 @@
+#summary Feature requests submitted by users.
 #labels Featured
-#Feature requests submitted by users.
 
-= Introduction =
+===To submit a feature request...===
 
-Use the comments section below to submit feature requests for upcoming versions.                                             
+Simply post your request using the comments form below.                                              
