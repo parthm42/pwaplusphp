@@ -1,0 +1,11 @@
+#summary Language files available for PWA+PHP.
+
+= Introduction =
+
+Version 1.7.5 of PWA+PHP supports multiple languages via the config files below.  Download the file corresponding to the language you want to use on your site and place it in the lang/ folder.  Then, edit config.php to point to that file.  For example, for US English, the $SITE_LANGUAGE file should point to "en_us":
+
+`$SITE_LANGUAGE="en_us";`
+
+= Language Files =
+
+This is where we need your help.
