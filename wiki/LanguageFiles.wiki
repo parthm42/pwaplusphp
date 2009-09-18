@@ -1,4 +1,5 @@
 #summary Procedure for submitting or downloading additional language support for PWA+PHP.
+#labels Featured
 
 = Introduction =
 
