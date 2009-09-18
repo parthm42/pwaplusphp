@@ -1,4 +1,4 @@
-#summary Language files available for PWA+PHP.
+#summary Procedure for submitting or downloading additional language support for PWA+PHP.
 
 = Introduction =
 
@@ -8,7 +8,7 @@ Version 1.7.5 of PWA+PHP supports multiple languages via the config files below.
 
 = Translators Needed =
 
-This is where we need your help.  Copy the sample file below and translate it, then [http://code.google.com/p/pwaplusphp/issues/entry?template=Language%20File%20Submission submit it] and we'll post it on the downloads page.
+This is where we need your help.  Copy the sample file below and translate it, then [http://code.google.com/p/pwaplusphp/issues/entry?template=Language%20File%20Submission submit it] and we'll post it on the [http://code.google.com/p/pwaplusphp/downloads/list downloads page].
 
 = Sample Language File =
 
