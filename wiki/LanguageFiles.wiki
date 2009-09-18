@@ -6,9 +6,9 @@ Version 1.7.5 of PWA+PHP supports multiple languages via the config files below.
 
 `$SITE_LANGUAGE="en_us";`
 
-= Language Files =
+= Translators Needed =
 
-This is where we need your help.  Copy the sample file below and translate it, then submit it.
+This is where we need your help.  Copy the sample file below and translate it, then submit it and we'll post it on the downloads page.
 
 = Sample Language File =
 
