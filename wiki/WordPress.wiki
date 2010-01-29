@@ -1,4 +1,4 @@
-#Instructions for setting up PWA+PHP within your WordPress blog
+# Instructions for setting up PWA+PHP within your WordPress blog
 
 = Introduction =
 
