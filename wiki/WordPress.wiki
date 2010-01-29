@@ -2,6 +2,8 @@
 
 = Introduction =
 
+PWA+PHP can be easily integrated into your WordPress blog, but it requires some code modifications.  You can [http://smccandl.net/wp/?page=5 see a working example here]. To simplyify the process, I've copied the files from that demo install and made them available for download in the Downloads section.
+
 in gallery.php
 
 $GDATA_TOKEN="YOUR_TOKEN";
