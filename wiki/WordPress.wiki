@@ -25,12 +25,12 @@ $action = "/wp/?page=12";          # Name of the page that displays galleries
 $back_link = "/wp/?page=5";       # Name of the file that displays all albums
 }}}
   # Edit lines in lightbox CSS and javascript files to point to the correct places
-  #* css/lightbox.css
+   #* css/lightbox.css
 {{{
   #prevLink:hover, #prevLink:visited:hover { background: url(/wp/wp-content/images/prevlabel.gif) left 15% no-repeat; }
   #nextLink:hover, #nextLink:visited:hover { background: url(/wp/wp-content/images/nextlabel.gif) right 15% no-repeat; }
 }}}
-  #* js/lightbox.js
+   #* js/lightbox.js
 {{{
 fileLoadingImage:        '/wp/wp-content/images/loading.gif',
 fileBottomNavCloseImage: '/wp/wp-content/images/closelabel.gif',
