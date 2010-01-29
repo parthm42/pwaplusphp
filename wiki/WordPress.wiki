@@ -1,9 +1,30 @@
-# Instructions for setting up PWA+PHP within your WordPress blog
+#summary Instructions for setting up PWA+PHP within your WordPress blog
 
 = Introduction =
 
-Add your content here.
+in gallery.php
 
+$GDATA_TOKEN="YOUR_TOKEN";
+$PICASAWEB_USER="YOUR_PWA_ID";
+
+$action = "/wp/?page=12";          # Name of the page that displays galleries
+$back_link = "/wp/?page=5";       # Name of the file that displays all albums
+
+in index.php
+
+$GDATA_TOKEN="YOUR_TOKEN";
+$PICASAWEB_USER="YOUR_PWA_ID";
+$action = "/wp/?page_id=12";       # Name of the page that displays galleries
+
+in css/lightbox.css
+
+#prevLink:hover, #prevLink:visited:hover { background: url(/wp/wp-content/images/prevlabel.gif) left 15% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(/wp/wp-content/images/nextlabel.gif) right 15% no-repeat; }
+
+in js/lightbox.js
+
+fileLoadingImage:        '/wp/wp-content/images/loading.gif',
+fileBottomNavCloseImage: '/wp/wp-content/images/closelabel.gif',
 
 = Details =
 
