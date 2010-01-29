@@ -2,11 +2,11 @@
 
 = Introduction =
 
-PWA+PHP can be easily integrated into your WordPress blog, but it requires some code modifications.  You can [http://smccandl.net/wp/?page_id=5 see a working example here]. To simplyify the process, I've copied the files from that demo install and made them available for download in the Downloads section.
+PWA+PHP can be easily integrated into your WordPress blog, but it requires some code modifications.  You can [http://smccandl.net/wp/?page_id=5 see a working example here]. To simplyify the process, I've copied the files from that demo install and made them available for download in the [http://code.google.com/p/pwaplusphp/downloads/list Downloads section].
 
 = Procedure =
 
-  # Download the code in the Downloads section.
+  # Download the code in the [http://code.google.com/p/pwaplusphp/downloads/list Downloads section].
   # Extract the code in the root of your WP installation, one level above the wp-content directory
   # Follow the [http://wordpress.org/extend/plugins/exec-php/ Exec-PHP install instructions] (the code is included as part of the bundle but you still need to enable it within WP)
   # Create a new page in WP and copy the contents of index.php from the bundle
