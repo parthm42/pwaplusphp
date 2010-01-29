@@ -6,31 +6,31 @@ PWA+PHP can be easily integrated into your WordPress blog, but it requires some 
 
 = Procedure =
 
-# Download the code in the Downloads section.
-# Extract the code in the root of your WP installation, one level above the wp-content directory
-# Follow the [http://wordpress.org/extend/plugins/exec-php/ Exec-PHP install instructions] (the code is included as part of the bundle but you still need to enable it within WP)
-# Create a new page in WP and copy the contents of index.php from the bundle
-# Edit each of the following lines to suit:
+  # Download the code in the Downloads section.
+  # Extract the code in the root of your WP installation, one level above the wp-content directory
+  # Follow the [http://wordpress.org/extend/plugins/exec-php/ Exec-PHP install instructions] (the code is included as part of the bundle but you still need to enable it within WP)
+  # Create a new page in WP and copy the contents of index.php from the bundle
+  # Edit each of the following lines to suit:
 {{{
 $GDATA_TOKEN="YOUR_TOKEN";
 $PICASAWEB_USER="YOUR_PWA_ID";
 $action = "/wp/?page_id=12";       # Name of the page that displays galleries
 }}}
-# Create a second new page in WP and copy the contents of gallery.php from the bundle
-# Edit each of the following lines to suit:
+  # Create a second new page in WP and copy the contents of gallery.php from the bundle
+  # Edit each of the following lines to suit:
 {{{
 $GDATA_TOKEN="YOUR_TOKEN";
 $PICASAWEB_USER="YOUR_PWA_ID";
 $action = "/wp/?page=12";          # Name of the page that displays galleries
 $back_link = "/wp/?page=5";       # Name of the file that displays all albums
 }}}
-# Edit lines in lightbox CSS and javascript files to point to the correct places
-#* css/lightbox.css
+  # Edit lines in lightbox CSS and javascript files to point to the correct places
+  #* css/lightbox.css
 {{{
-#prevLink:hover, #prevLink:visited:hover { background: url(/wp/wp-content/images/prevlabel.gif) left 15% no-repeat; }
-#nextLink:hover, #nextLink:visited:hover { background: url(/wp/wp-content/images/nextlabel.gif) right 15% no-repeat; }
+  #prevLink:hover, #prevLink:visited:hover { background: url(/wp/wp-content/images/prevlabel.gif) left 15% no-repeat; }
+  #nextLink:hover, #nextLink:visited:hover { background: url(/wp/wp-content/images/nextlabel.gif) right 15% no-repeat; }
 }}}
-#* js/lightbox.js
+  #* js/lightbox.js
 {{{
 fileLoadingImage:        '/wp/wp-content/images/loading.gif',
 fileBottomNavCloseImage: '/wp/wp-content/images/closelabel.gif',
