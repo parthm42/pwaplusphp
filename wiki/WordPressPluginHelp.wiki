@@ -3,11 +3,11 @@
 
 = Introduction =
 
-This plugin allows you to display your public and private (unlisted) Picasa albums within WordPress.  It is in alpha stages and there are likely bugs.  If you find one, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
+This plugin allows you to display your public and private (unlisted) Picasa albums within WP.  It is in alpha stages and there are likely bugs.  If you find one, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
 
 = Requirements =
 
-You must have installed and activated Fancybox, Shadowbox or Lightbox WordPress plugin.
+You must have installed and activated Fancybox, Shadowbox or Lightbox WP plugin.
 
 = Installation =
 
