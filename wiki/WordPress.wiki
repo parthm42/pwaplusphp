@@ -1,4 +1,5 @@
 #summary How to setup PWA+PHP to display Picasa Albums on your WordPress blog
+#labels Deprecated
 
 = Introduction =
 
