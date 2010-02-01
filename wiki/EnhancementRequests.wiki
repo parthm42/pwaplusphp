@@ -1,5 +1,4 @@
 #summary Procedure for submitting feature and enhancement requests.
-#labels Featured
 
 === Introduction ===
 
