@@ -1,0 +1,19 @@
+#summary Information about the PWA+PHP WordPress Plugin
+#labels Featured
+
+= Introduction =
+
+This plugin allows you to display your public and private (unlisted) Picasa albums within WordPress.  It is in alpha stages and there are likely bugs.  If you find one, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
+
+= Requirements =
+
+You must have installed and activated Fancybox, Shadowbox or Lightbox WordPress plugin.
+
+= Installation =
+
+  # Extract archive in the plugins directory under wp-content
+  # Activate it in the admin panel
+  # Go to the Settings section, click on PWA+PHP and run thru the token generation and options-setting steps.
+  # Create a new page with either:
+   * [pwaplusphp] - this tag will display all your albums and you can click any one to see the photos in that album
+   * [pwaplusphp album="some_album_name"] - this tag will display the photos from this album only
