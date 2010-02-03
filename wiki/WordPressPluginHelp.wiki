@@ -19,7 +19,7 @@ You must have installed and activated Fancybox, Shadowbox or Lightbox WP plugin.
 
 Insert one of the shortcodes below into your pages and widgets:
 
-||*Shortcode||*Result||*Use In||
+|| *Shortcode* || *Result* || *Use In* ||
 ||{{{[pwaplusphp]}}}||Displays all your albums, click one to see the photos in that album||Page||
 ||{{{[pwaplusphp album="some_album"]}}}||Display photos from some_album only||Page,Post||
 ||{{{[pwaplusphp album="random_photo"]}}}||Displays one randomly selected photo||Widget||
