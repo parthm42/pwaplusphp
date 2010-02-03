@@ -14,6 +14,12 @@ You must have installed and activated Fancybox, Shadowbox or Lightbox WP plugin.
   # Extract archive in the plugins directory under wp-content
   # Activate it in the admin panel
   # Go to the Settings section, click on PWA+PHP and run thru the token generation and options-setting steps.
-  # Create a new page with either:
-   * {{{[pwaplusphp]}}} - this tag will display all your albums and you can click any one to see the photos in that album
-   * {{{[pwaplusphp album="some_album_name"]}}} - this tag will display the photos from this album only
+
+= Usage =
+
+Insert one of the shortcodes below into your pages and widgets:
+
+||*Shortcode*||*Result*||*Best Use||
+||{{{[pwaplusphp]}}}||Displays all your albums, click one to see the photos in that album||Page||
+||{{{[pwaplusphp album="some_album"]}}}||Display photos from some_album only||
+||{{{[pwaplusphp album="random_photo"]}}}||Displays one randomly selected photo||Page||
