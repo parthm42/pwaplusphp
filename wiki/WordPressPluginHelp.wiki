@@ -9,6 +9,10 @@ This plugin allows you to display your public and private (unlisted) Picasa albu
 
 You must have installed and activated Fancybox, Shadowbox or Lightbox WP plugin.
 
+= Download =
+
+[http://wordpress.org/extend/plugins/pwaplusphp/]
+
 = Installation =
 
   # Extract archive in the plugins directory under wp-content
