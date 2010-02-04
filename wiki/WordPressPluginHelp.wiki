@@ -27,4 +27,4 @@ Insert one of the shortcodes below into your pages and widgets:
 ||{{{[pwaplusphp]}}}||Displays all your albums, click one to see the photos in that album||Page||
 ||{{{[pwaplusphp album="some_album"]}}}||Display photos from some_album only||Page, Post||
 ||{{{[pwaplusphp album="random_photo"]}}}||Displays one randomly selected photo||Widget||
-||{{{[pwaplusphp filter="2009"]}}}||Displays all albums with _2009 in the title||Page||
+||{{{[pwaplusphp filter="2009"]}}}||Displays all albums with `_2009` in the title||Page||
