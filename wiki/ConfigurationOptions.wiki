@@ -1,6 +1,6 @@
 #summary PWA+PHP Configuration Options
 
-= Variables =
+= Settings / Options =
 
 || *Name* || *Description* ||
 ||Picasaweb User||Enter your Picasaweb username. This is the username you use to login to view your albums.||
