@@ -11,10 +11,10 @@
 ||Album Thumbnail Size||Sets the album thumbnail size. May need to alter overlay CSS if value < 160. These values are supported by the Picasaweb API.||
 ||Photo Thumbnail Size||Set the thumbnail size. These values are supported by the Picasaweb API.||
 ||Album Details||Setting this to TRUE will overlay the album details on the gallery thumbnails when the user hovers the mouse over the image.||
-||Truncate Album Names||Album names are truncated by default on the gallery page to ensure the div-based layout displays properly. Set this to FALSE to show the full album name.||
-||Description Length||Trim display length of description to specific number of characters||
+||Truncate Album Names||Album names are truncated by default on the gallery page to ensure the div-based layout displays properly -- long album titles that don't fit beneath the thumbnail can break the fluid, div-based layout. Set this to FALSE to show the full album name.||
+||Description Length||Trim display length of description to specific number of characters to ensure the on-hover description overlaid on the album fits in the available space over the thumbnail||
 ||Show Photo Caption||This option allows you to specify whether or not captions are displayed under photos. Options are always, never, or only when the user hovers over the space below the thumbnail. Click the caption to save the image if PERMIT_IMG_DOWNLOAD is set to TRUE. Captions work best with largr thumbnail sizes.||
-||Caption Length||Trim display length of captions to specific number of characters||
+||Caption Length||Trim display length of captions to specific number of characters to ensure the caption fits beneath the photo thumbnail||
 ||Require Filter||Set this to FALSE unless you want to *require* a search filter in the URL -- you can still filter albums with this set to FALSE. Setting to TRUE *requires* a filter string in the URL to prevent certain users from seeing certain albums.||
 ||Public Albums Only||This option allows you to specify whether to display only public or both public and private albums of the user specified above.||
 ||Show Drop Box||The Drop Box is a special Picasa album that stores images uploaded by email. Setting this variable to TRUE forces diplay of the drop box on all pages, even when a filter is specified.||
