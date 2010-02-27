@@ -5,15 +5,12 @@
 || *Name* || *Description* ||
 ||Picasaweb User||Enter your Picasaweb username. This is the username you use to login to view your albums.||
 ||GData Token||This token was generated during Step 1 and it allows PWA+PHP to access and display your private (unlisted) Picasa albums. The value cannot be changed.||
-
-|| *Name* || *Description* ||
+||Basic Settings||
 ||Site Language||Select the language you wish to use. More may be available on the PWA+PHP download page||
 ||Images Per Page||Set the number of thumbnails to display per page. Value of 0 means don't paginate.||
 ||Image Size||Set the display size for full images. These values are supported by the Picasaweb API.||
 ||Album Thumbnail Size||Sets the album thumbnail size. May need to alter overlay CSS if value < 160. These values are supported by the Picasaweb API.||
 ||Photo Thumbnail Size||Set the thumbnail size. These values are supported by the Picasaweb API.||
-
-|| *Name* || *Description* ||
 ||Require Filter||Set this to FALSE unless you want to *require* a search filter in the URL -- you can still filter albums with this set to FALSE. Setting to TRUE *requires* a filter string in the URL to prevent certain users from seeing certain albums.||
 ||Public Albums Only||This option allows you to specify whether to display only public or both public and private albums of the user specified above.||
 ||Album Details||Setting this to TRUE will overlay the album details on the gallery thumbnails when the user hovers the mouse over the image.||
