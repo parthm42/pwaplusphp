@@ -20,7 +20,7 @@ This plugin allows you to display your public and private (unlisted) Picasa albu
 
 = Additional Pro Version Features =
 
-    * Comments: Show photo's comments in Shadowbox, allow users to add comments to photos, and show recent comments in widget
+    * Comments: Show photo's comments in Shadowbox and Highslide, allow users to comment on photos, and show recent comments in widget
     * Cache Thumbnails: Save thumbnails on server for faster page loads
     * Album Cover Shortcode: Show album cover thumbnail in a post instead of album contents
     * Random Album Shortcode: Show random album, instead of random photo
