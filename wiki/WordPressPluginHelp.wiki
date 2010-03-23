@@ -7,24 +7,23 @@ This plugin allows you to display your public and private (unlisted) Picasa albu
 
 = Basic Version Features =
 
-* Embed all your public, private and unlisted Picasa web albums on any website
-* Group and filter albums [using keywords](http://code.google.com/p/pwaplusphp/wiki/Album_Filtering) in the album title
-* Uploaded images via email, web interface or desktop app and see them instantly
-* Display image totals for the entire gallery and by album
-* Configure caption settings with 4 options
-* Allow users to download full-size copies of your images
-* Install script guides setup and token generation for private albums
-* Interface configuration via [16 variables](http://code.google.com/p/pwaplusphp/wiki/ConfigurationOptions) (image size, thumbnail size, pagination, etc)
-* Modify included CSS file to match your site exactly
-* Available in 8 languages and extensible to others!
+    * Embed all your public, private and unlisted Picasa web albums on any website
+    * Group and filter albums [using keywords](http://code.google.com/p/pwaplusphp/wiki/Album_Filtering) in the album title
+    * Uploaded images via email, web interface or desktop app and see them instantly
+    * Display image totals for the entire gallery and by album
+    * Configure caption settings with 4 options
+    * Allow users to download full-size copies of your images
+    * Install script guides setup and token generation for private albums
+    * Interface configuration via [16 variables](http://code.google.com/p/pwaplusphp/wiki/ConfigurationOptions) (image size, thumbnail size, pagination, etc)
+    * Modify included CSS file to match your site exactly
+    * Available in 8 languages and extensible to others!
 
 = Additional Pro Version Features =
 
-* Comments: Show photo's comments in Shadowbox, allow users to add comments to photos, and show recent comments in widget
-* Cache Thumbnails: Save thumbnails on server for faster page loads
-* Album Cover Shortcode: Show album cover thumbnail in a post instead of album contents
-* Random Album Shortcode: Show random album, instead of random photo
-* Hide Video: Option to suppress display of video thumbnails
+    * Comments: Show photo's comments in Shadowbox, allow users to add comments to photos, and show recent comments in widget
+    * Cache Thumbnails: Save thumbnails on server for faster page loads
+    * Album Cover Shortcode: Show album cover thumbnail in a post instead of album contents
+    * Random Album Shortcode: Show random album, instead of random photo
 
 = Requirements =
 
