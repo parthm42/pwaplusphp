@@ -25,26 +25,17 @@ If this is correct, Login to your Google Account
 
 If you want to include this php script within another PHP code via the include() function or if you want to embed the code within a CMS, like Drupal, you'll need to modify the code a bit.  See below.
 
-  * Ensure `$STANDALONE_MODE=TRUE` in the config.php
+  * Ensure `$STANDALONE_MODE=FALSE` in the config.php
   * Copy the entire contents of config.php into the top of both index.php and gallery.php
-  * Rename index.php to something less popular, like albums.php and update line 159 and 209 in gallery.php to point to the new name, replacing index.php on that line with the new name.
+  * Rename index.php to something less popular, like albums.php and update the following lines with the new name:
 {{{
 159:                    echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='index.php'>...back to album list</a></p><p>&nbsp;</p>\n";
 }}}
-  * Update lines 23 in index.php (which you renamed) to point to the embedded or included location of gallery.php.
+  * Update all instances of the $action variable in index.php (which you renamed) to point to the embedded or included location of gallery.php.
 {{{
 23:			$action = "gallery.php";
 }}}
-  For example, if you're using Drupal and gallery.php is included on the page with id "node/3", your updated line 23 would look like:
-{{{
-$action="?q=node/3";
-}}}
-  ...because drupal URLs have the form "http://example.com/?q=node/3".
-  * Update line 23 in gallery.php to point to the same location as the previous step, for pagination.
-{{{
-23:		       $action="?q=node/3";
-}}}
- * Update line 24 in gallery.php to point to the new name of index.php, for links back to the main page.
+ * Update $back_link variable in gallery.php to point to the new name of index.php, for links back to the main page.
 {{{
 24:		       $back_link="albums.php";
 }}}
