@@ -4,7 +4,7 @@
 
   * Unzip the archive you downloaded under the public_html folder on your webserver
 {{{
-$ tar xvf pwa+php_v1.4.tar
+$ tar xvf pwa+php_v1.8.3.tar
 pwaplusphp/gallery.php
 pwaplusphp/index.php
 pwaplusphp/install.php
