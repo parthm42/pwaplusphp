@@ -33,7 +33,7 @@ You must have installed and activated Highslide, Fancybox, Shadowbox or Lightbox
 
 To download the basic version, head to [http://wordpress.org/extend/plugins/pwaplusphp/]
 
-To download the Pro Version, [http://pwaplusphp.smccandl.net/ make a donation] and [http://code.google.com/p/pwaplusphp/downloads/list download the code].  You'll receive the password for the zip file via email.
+To download the Pro Version, [http://pwaplusphp.smccandl.net/ make a donation] and you'll receive the plugin zip file via email instantly.
 
 = Installation =
 
