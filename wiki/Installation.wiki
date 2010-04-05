@@ -36,3 +36,7 @@ If you want to include this php script within another PHP code via the include()
 {{{
 24:		       $back_link="albums.php";
 }}}
+ * Add a PHP include statement to your site design where you want the gallery to appear:
+{{{
+<?php include("albums.php"); ?>
+}}}
