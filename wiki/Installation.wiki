@@ -27,11 +27,7 @@ If this is correct, Login to your Google Account
 If you want to include this php script within another PHP code via the include() function or if you want to embed the code within a CMS, like Drupal, you'll need to modify the code a bit.  See below.
 
   * Ensure `$STANDALONE_MODE=FALSE` in the config.php
-  * Copy the entire contents of config.php into the top of both index.php and gallery.php
-  * Rename index.php to something less popular, like albums.php and update the following lines with the new name:
-{{{
-159:                    echo "<div id='title'><h2>$ALBUM_TITLE</h2></div><p><a class='back_to_list' href='index.php'>...back to album list</a></p><p>&nbsp;</p>\n";
-}}}
+  * Rename index.php to something less popular, like albums.php and move it, config.php, gallery.php and pwaplusphp.css to your site's directory.
   * Update all instances of the $action variable in index.php (which you renamed) to point to the embedded or included location of gallery.php.
 {{{
 23:			$action = "gallery.php";
