@@ -7,6 +7,10 @@ This plugin allows you to display your public and private (unlisted) Picasa albu
 
 = Demo =
 
+The PWA+PHP Pro for Wordpress plugin demo can be found at the link below:
+
+[http://pwaplusphp.smccandl.net/pro]
+
 = Basic Version Features =
 
     * Embed all your public, private and unlisted Picasa web albums on any website
