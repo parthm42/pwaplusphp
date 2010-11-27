@@ -54,6 +54,7 @@ Insert one of the shortcodes below into your pages and widgets:
 || *Shortcode* || *Result* || *Use In* ||
 ||{{{[pwaplusphp]}}}||Displays all your albums, click one to see the photos in that album||Page||
 ||{{{[pwaplusphp album="some_album"]}}}||Display photos from some_album only||Page, Post||
+||{{{[pwaplusphp album="some_album" images_per_page="20" image_size="800" thumbnail_size="32"]}}}||Display photos from some_album only with different settings for image size, thumbnail size and images per page.||Page, Post||
 ||{{{[pwaplusphp tag="beach"]}}}||Display photos matching tag 'beach' from all albums||Page, Post||
 ||{{{[pwaplusphp album="Miami" tag="beach"]}}}||Display photos matching tag 'beach' from the 'Miami' album only||Page, Post||
 ||{{{[pwaplusphp album="some_album" cover="TRUE"]}}}||(Pro Only) Display cover image of some_album, clicking takes user to page set as Main Photo Page in settings panel||Widget||
