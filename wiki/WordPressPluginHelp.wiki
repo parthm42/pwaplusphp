@@ -8,6 +8,8 @@ This plugin allows you to display your public and private (unlisted) Picasa albu
 = Known Issues =
 || *Affects* || *Issue* ||
 || 0.9.3 Pro || Album title and 'back to album' link not displayed.  Patch not yet published but see [http://code.google.com/p/pwaplusphp/issues/detail?id=73 Issue 73] for fix instructions.||
+|| 0.9.3 Pro || Setting 'Albums Per Page' not saved.  Will be fixed in next Pro release, in the meantime see [http://code.google.com/p/pwaplusphp/issues/detail?id=72 Issue 72] for fix instructions.||
+
 || 0.9.3 Both || Paginated Albums Won't Open.  Patch published for Standard version.  Pro will be updated at next release -- see [http://code.google.com/p/pwaplusphp/issues/detail?id=78 Issue 78] for fix instructions.||
 || Various || See the [http://code.google.com/p/pwaplusphp/issues/list Issues Page] for other user-reported issues.||
 
