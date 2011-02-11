@@ -6,8 +6,9 @@
 This plugin allows you to display your public and private (unlisted) Picasa albums within WP.  It is in alpha stages and there are likely bugs.  If you find one, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
 
 = Known Issues =
-|| *Affected Version* || *Issue* ||
-|| 0.9.3 Pro || Album title and 'back to album' link not displayed.  Patch not yet published but see[http://code.google.com/p/pwaplusphp/issues/detail?id=73 Issue 73] for fix instructions.||
+|| *Affects* || *Issue* ||
+|| 0.9.3 Pro || Album title and 'back to album' link not displayed.  Patch not yet published but see [http://code.google.com/p/pwaplusphp/issues/detail?id=73 Issue 73] for fix instructions.||
+|| 0.9.3 Both || Paginated Albums Won't Open.  Patch published for Standard version.  Pro will be updated at next release -- see [http://code.google.com/p/pwaplusphp/issues/detail?id=78 Issue 78] for fix instructions.||
 
 = Demo =
 
