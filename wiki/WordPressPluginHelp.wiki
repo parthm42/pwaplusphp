@@ -28,7 +28,7 @@ The PWA+PHP Pro for Wordpress plugin demo can be found at the link below:
     * Install script guides setup and token generation for private albums
     * Interface configuration via [16 variables](http://code.google.com/p/pwaplusphp/wiki/ConfigurationOptions) (image size, thumbnail size, pagination, etc)
     * Modify included CSS file to match your site exactly
-    * Available in 8 languages and extensible to others!
+    * Available in 10 languages and extensible to others!
 
 = Additional Pro Version Features =
 
