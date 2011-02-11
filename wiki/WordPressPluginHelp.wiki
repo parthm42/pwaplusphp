@@ -3,7 +3,7 @@
 
 = Introduction =
 
-This plugin allows you to display your public and private (unlisted) Picasa albums within WP.  It is in alpha stages and there are likely bugs.  If you find one, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
+This plugin allows you to display your public and private (unlisted) Picasa albums within WP.  If you find a bug, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
 
 = Known Issues =
 || *Affects* || *Issue* ||
