@@ -6,7 +6,13 @@ The next release of PWA+PHP Pro v0.9.4 for Wordpress drops on March 31st with dr
 
 ==New Features==
 
-===jQuery Pagination for Albums=== 
-_Status: In Progress_
-JQ pagination implemented via [http://www.malsup.com/jquery/cycle jQuery Cycle Plugin, providing 28 transition styles. Remaining ToDo's:
-    * Graceful degrade to old pagination style where JS is disabled||
+===jQuery Pagination for Albums (in progress)=== 
+JQ pagination implemented via [http://www.malsup.com/jquery/cycle jQuery Cycle Plugin, providing 28 transition styles. 
+Remaining ToDo's:
+    * Graceful degrade to old pagination style where JS is disabled
+    * Add settings page option for pagination style selection
+
+===Faster Page Loads (done)===
+Various changes (detailed below) have contributed to noticeably faster page loads, especially for large (300+) image albums.
+    * Removed layout options within display loop, which eliminated 4 logical comparisons per image displayed. 
+    * Implemented caption hovers via JQuery vs old CSS approach
