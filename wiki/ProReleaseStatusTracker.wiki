@@ -12,7 +12,7 @@ http://pwaplusphp.smccandl.net/pro-beta/demo
 ==New Features==
 
 ===jQuery Pagination for Image Thumbs (in progress)=== 
-JQ pagination implemented via [http://www.malsup.com/jquery/cycle jQuery Cycle Plugin, providing 28 transition styles. 
+JQ pagination implemented via [http://www.malsup.com/jquery/cycle jQuery Cycle Plugin], providing 28 transition styles. 
 Remaining ToDo's:
     * Graceful degrade to old pagination style where JS is disabled
     * Add settings page option for pagination style selection
