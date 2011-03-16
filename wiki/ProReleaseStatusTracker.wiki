@@ -2,12 +2,10 @@
 
 = Introduction =
 
-Add your content here.
+The next release of PWA+PHP Pro v0.9.4 for Wordpress drops on March 31st with drastically faster page loads, modern jQuery transition effects and better cross-browser support. Test drive the beta demo, visit the status tracker and please report any issues you encounter.
 
+= New Feature Status =
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+||*Item*||*Status*||*Notes*||
+||jQuery Pagination for Albums||Added||JQ pagination implemented via [http://www.malsup.com/jquery/cycle jQuery Cycle Plugin, providing 28 transition styles. Remaining ToDo's:
+* Graceful degrade to old pagination style where JS is disabled||
