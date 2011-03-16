@@ -4,7 +4,7 @@
 
 The next release of PWA+PHP Pro v0.9.4 for Wordpress drops on March 31st with drastically faster page loads, modern jQuery transition effects and better cross-browser support. Test drive the beta demo, visit the status tracker and please report any issues you encounter.
 
-===Demo===
+==Demo==
 
 Test drive the (in progress and continually updated) live demo of the new code at:
 http://pwaplusphp.smccandl.net/pro-beta/demo
