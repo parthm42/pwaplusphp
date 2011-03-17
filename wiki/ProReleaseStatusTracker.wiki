@@ -35,3 +35,9 @@ Added ability to override the username within shortcode to display any user's pu
     * fixed album title and back-link bug 
     * fixed issue 84 link 404
     * fix dropbox always shown
+|| *Affects* || *Issue* ||
+|| [http://code.google.com/p/pwaplusphp/issues/detail?id=83 Issue 83] || 404 error when clicking either thumbnail or text link. ||
+|| [http://code.google.com/p/pwaplusphp/issues/detail?id=73 Issue 73] || Album title and 'back to album' link not displayed.||
+|| [http://code.google.com/p/pwaplusphp/issues/detail?id=72 Issue 72] || Setting 'Albums Per Page' not saved.||
+|| [http://code.google.com/p/pwaplusphp/issues/detail?id=78 Issue 78] || Paginated Albums Won't Open.||
+|| [http://code.google.com/p/pwaplusphp/issues/detail?id=83 Issue 83] || Drop Box Always Shown||
