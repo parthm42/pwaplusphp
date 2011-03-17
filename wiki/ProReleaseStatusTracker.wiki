@@ -9,7 +9,7 @@ The next release of PWA+PHP Pro v0.9.4 for Wordpress drops on March 31st with dr
 Test drive the (in progress and continually updated) live demo of the new code at:
 http://pwaplusphp.smccandl.net/pro-beta/demo
 
-==New Features==
+==New Feature / Demo Status ==
 
 *jQuery Pagination for Image Thumbs (in progress)*
 JQ pagination implemented via [http://www.malsup.com/jquery/cycle jQuery Cycle Plugin], providing 28 transition styles. 
