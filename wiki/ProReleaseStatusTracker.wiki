@@ -11,25 +11,25 @@ http://pwaplusphp.smccandl.net/pro-beta/demo
 
 ==New Feature Status ==
 
-*jQuery Pagination for Image Thumbs (in progress)*
+===jQuery Pagination for Image Thumbs (in progress)===
 JQ pagination implemented via [http://www.malsup.com/jquery/cycle jQuery Cycle Plugin], providing 28 transition styles. 
 Remaining ToDo's:
     * Graceful degrade to old pagination style where JS is disabled
     * Add settings page option for pagination style selection
     * Add option to (or auto) disable for large galleries
 
-*jQuery Pagination for Album Thumbs (not started)*
+===jQuery Pagination for Album Thumbs (not started)===
 Similar to above item, but for the album thumbnails on the main gallery page. Must also support degradation for non-JS environments and should have option to disable for large album sets. 
 
-*Faster Page Loads (done)*
+===Faster Page Loads (done)===
 Various changes (detailed below) have contributed to noticeably faster page loads, especially for large (300+) image albums.
     * Removed layout options within display loop, which eliminated 4 logical comparisons per image displayed. 
     * Implemented caption hovers via JQuery vs old CSS approach
 
-*New Shortcode Overrides*
+===New Shortcode Overrides===
 Added ability to override the username within shortcode to display any user's public album and albums for different users on each page.
 
-*Bugs Fixed*
+===Bugs Fixed===
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=83 Issue 83] || 404 error when clicking either thumbnail or text link. ||
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=73 Issue 73] || Album title and 'back to album' link not displayed.||
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=72 Issue 72] || Setting 'Albums Per Page' not saved.||
