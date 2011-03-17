@@ -30,12 +30,6 @@ Various changes (detailed below) have contributed to noticeably faster page load
 Added ability to override the username within shortcode to display any user's public album and albums for different users on each page.
 
 *Bugs Fixed*
-    * fixed broken pagination
-    * fixed albums per page setting bug
-    * fixed album title and back-link bug 
-    * fixed issue 84 link 404
-    * fix dropbox always shown
-|| *Affects* || *Issue* ||
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=83 Issue 83] || 404 error when clicking either thumbnail or text link. ||
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=73 Issue 73] || Album title and 'back to album' link not displayed.||
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=72 Issue 72] || Setting 'Albums Per Page' not saved.||
