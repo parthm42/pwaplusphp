@@ -12,6 +12,7 @@ Remaining ToDo's:
     * Graceful degrade to old pagination style where JS is disabled
     * Add settings page option for pagination style selection
     * Add option to (or auto) disable for large galleries
+    * Complete cross-browser checks, fix broken ie6 layout
 
 ===jQuery Pagination for Album Thumbs (not started)===
 Similar to above item, but for the album thumbnails on the main gallery page. Must also support degradation for non-JS environments and should have option to disable for large album sets. 
