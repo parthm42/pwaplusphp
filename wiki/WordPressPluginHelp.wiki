@@ -15,9 +15,9 @@ This plugin allows you to display your public and private (unlisted) Picasa albu
 
 = Demo =
 
-The PWA+PHP Pro for Wordpress plugin demo can be found at the link below:
+*2011-03-16: UPDATE: The all-new Pro v0.9.4 plugin is almost ready! View the beta demo at [http://pwaplusphp.smccandl.net/pro-beta/].*
 
-[http://pwaplusphp.smccandl.net/pro]
+The PWA+PHP Pro for Wordpress plugin demo can be found at [http://pwaplusphp.smccandl.net/pro].
 
 = Basic Version Features =
 
