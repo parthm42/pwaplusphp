@@ -31,4 +31,4 @@ Various changes (detailed below) have contributed to noticeably faster page load
     * fixed albums per page setting bug
     * fixed album title and back-link bug 
     * fixed issue 84 link 404
-  fix dropbox always shown
+    * fix dropbox always shown
