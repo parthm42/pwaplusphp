@@ -2,7 +2,7 @@
 
 ==Introduction==
 
-The next release of PWA+PHP Pro v0.9.4 for Wordpress drops on March 31st with drastically faster page loads, modern jQuery transition effects and better cross-browser support. Test drive the beta demo, visit the status tracker and please report any issues you encounter.
+The next release of PWA+PHP Pro v0.9.4 for Wordpress drops on March 31st with drastically faster page loads, modern jQuery transition effects and better cross-browser support. Test drive the [http://pwaplusphp.smccandl.net/pro-beta/demo beta demo], visit the status tracker and please report any issues you encounter.
 
 ==Demo==
 
@@ -25,3 +25,10 @@ Similar to above item, but for the album thumbnails on the main gallery page. Mu
 Various changes (detailed below) have contributed to noticeably faster page loads, especially for large (300+) image albums.
     * Removed layout options within display loop, which eliminated 4 logical comparisons per image displayed. 
     * Implemented caption hovers via JQuery vs old CSS approach
+
+===Bugs Fixed===
+    * fixed broken pagination
+    * fixed albums per page setting bug
+    * fixed album title and back-link bug 
+    * fixed issue 84 link 404
+  fix dropbox always shown
