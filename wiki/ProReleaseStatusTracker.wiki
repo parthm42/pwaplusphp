@@ -19,8 +19,16 @@ Similar to above item, but for the album thumbnails on the main gallery page. Mu
 
 ===Faster Page Loads (done)===
 Various changes (detailed below) have contributed to noticeably faster page loads, especially for large (300+) image albums.
-    * Removed layout options within display loop, which eliminated 4 logical comparisons per image displayed. 
+    * Removed layout options within display loop, which eliminated 4 logical comparisons per image displayed.
+    * Enhanced cache functionality to include XML data
     * Implemented caption hovers via JQuery vs old CSS approach
+
+*Speed Comparison*
+||_Version_||_Mode_||_Album Size_||_1st Run_||_2nd Run_||
+||0.9.3 Basic|| N/A || 84 images || .94 sec || .77 sec ||
+||0.9.4 Pro Beta|| Cache Off || 84 images || .84 sec || .57 sec ||
+||0.9.4 Pro Beta|| Cache On || 84 images || .04 sec || .03 sec ||
+
 
 ===New Shortcode Overrides===
 Added ability to override the username within shortcode to display any user's public album and albums for different users on each page.
