@@ -24,10 +24,10 @@ Various enhancements have _drastically_ reduced page load times, especially for 
     * ~~Implement caption hovers via JQuery vs old CSS approach~~ (done, 3/14)
 
 *Speed Comparison*
-||_Version_||_Mode_||_Album Size_||_1st Run_||_2nd Run_||
-||0.9.3 Basic|| N/A || 84 images || .94 sec || .77 sec ||
-||0.9.4 Pro Beta|| Cache Off || 84 images || .84 sec || .57 sec ||
-||0.9.4 Pro Beta|| Cache On || 84 images || .04 sec || .03 sec ||
+||_Version_||_Mode_||_Album Size_||_1st Run_||_2nd Run_|| Improvement ||
+||0.9.3 Basic|| N/A || 84 images || .94 sec || .77 sec || N/A ||
+||0.9.4 Pro Beta|| Cache Off || 84 images || .84 sec || .57 sec || 17.5% ||
+||0.9.4 Pro Beta|| Cache On || 84 images || .04 sec || .03 sec || 96% (24x faster!)
 
 
 ===New Shortcode Overrides===
