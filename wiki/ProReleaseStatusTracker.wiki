@@ -34,6 +34,7 @@ Various enhancements have _drastically_ reduced page load times, especially for 
 Added ability to override the username within shortcode to display any user's public album and albums for different users on each page.
 
 ===Bugs Fixed===
+|| [http://code.google.com/p/pwaplusphp/issues/detail?id=86 Issue 86] || Caching broken for some installs||
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=83 Issue 83] || 404 error when clicking either thumbnail or text link. ||
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=73 Issue 73] || Album title and 'back to album' link not displayed.||
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=72 Issue 72] || Setting 'Albums Per Page' not saved.||
