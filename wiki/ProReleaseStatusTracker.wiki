@@ -18,10 +18,10 @@ Remaining ToDo's:
 Similar to above item, but for the album thumbnails on the main gallery page. Must also support degradation for non-JS environments and should have option to disable for large album sets. 
 
 ===Faster Page Loads (done)===
-Various changes (detailed below) have contributed to noticeably faster page loads, especially for large (300+) image albums.
-    * Removed layout options within display loop, which eliminated 4 logical comparisons per image displayed. (done, 3/14)
-    * Enhanced cache functionality to include XML data (done, 3/20)
-    * Implemented caption hovers via JQuery vs old CSS approach (done, 3/14)
+Various enhancements have _drastically_ reduced page load times, especially for Pro version w/ cache enabled.
+    * ~~Remove layout options within display loop~~ (done, 3/14)
+    * ~~Enhance cache functionality to include XML data~~ (done, 3/20)
+    * ~~Implement caption hovers via JQuery vs old CSS approach~~ (done, 3/14)
 
 *Speed Comparison*
 ||_Version_||_Mode_||_Album Size_||_1st Run_||_2nd Run_||
