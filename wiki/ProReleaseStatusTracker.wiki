@@ -16,8 +16,11 @@ Remaining ToDo's:
     
 ===jQuery Pagination for Album Thumbs (not started)===
 Similar to above item, but for the album thumbnails on the main gallery page. Must also support degradation for non-JS environments and should have option to disable for large album sets. 
+    * ~~Add jQuery page transitions for pagination~~ (done 3/24)
+    * Add album description overlays via JQ  
+    * Fix active page bug, wrong link highlighted
 
-===Faster Page Loads (done)===
+Faster Page Loads (done)===
 Various enhancements have _drastically_ reduced page load times, especially for Pro version w/ cache enabled.
     * ~~Remove layout options within display loop~~ (done, 3/14)
     * ~~Enhance cache functionality to include XML data~~ (done, 3/20)
