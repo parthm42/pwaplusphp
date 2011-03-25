@@ -14,7 +14,7 @@ Remaining ToDo's:
     * ~~Graceful degrade to old pagination style where JS is disable~~ (done 3/18)
     * ~~Add settings page option for pagination style selection~~ (done 3/18)
     
-===jQuery Pagination for Album Thumbs (not started)===
+===jQuery Pagination for Album Thumbs (in progress)===
 Similar to above item, but for the album thumbnails on the main gallery page. Must also support degradation for non-JS environments and should have option to disable for large album sets. 
     * ~~Add jQuery page transitions for pagination~~ (done 3/24)
     * Add album description overlays via JQ  
