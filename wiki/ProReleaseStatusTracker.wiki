@@ -20,10 +20,11 @@ Similar to above item, but for the album thumbnails on the main gallery page. Mu
     * Add album description overlays via JQ  
     * Fix active page bug, wrong link highlighted
 
-Faster Page Loads (done)===
+===Faster Page Loads (done)===
 Various enhancements have _drastically_ reduced page load times, especially for Pro version w/ cache enabled.
+    * ~~Cache XML data for album list~~ (done, 3/28)
     * ~~Remove layout options within display loop~~ (done, 3/14)
-    * ~~Enhance cache functionality to include XML data~~ (done, 3/20)
+    * ~~Enhance cache functionality to include XML data for individual galleries~~ (done, 3/20)
     * ~~Implement caption hovers via JQuery vs old CSS approach~~ (done, 3/14)
 
 *Speed Comparison*
@@ -31,6 +32,9 @@ Various enhancements have _drastically_ reduced page load times, especially for 
 ||0.9.3 Basic|| N/A || 84 images || .94 sec || .77 sec || N/A ||
 ||0.9.4 Pro Beta|| Cache Off || 84 images || .84 sec || .57 sec || 17.5% ||
 ||0.9.4 Pro Beta|| Cache On || 84 images || .04 sec || .03 sec || 96% (24x faster!)||
+
+===Better News & Announcements (done)===
+Added news feed to settings page to communicate updates, known issues, and other important information. (done, 3/28)
 
 
 ===New Shortcode Overrides===
