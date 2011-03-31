@@ -1,5 +1,8 @@
 #summary Status page for milestones and progress on upcoming release of PWA+PHP Pro.
 
+==Release Delayed Until 4/4==
+My limited availability and some snags have forced me to delay the Pro release until next Monday, 4/4. 
+
 ==Introduction==
 
 The next release of PWA+PHP Pro v0.9.4 for Wordpress drops on March 31st with drastically faster page loads, modern jQuery transition effects and better cross-browser support. Test drive the [http://pwaplusphp.smccandl.net/pro-beta/demo beta demo], visit the [http://code.google.com/p/pwaplusphp/wiki/ProReleaseStatusTracker status tracker] and please report any issues you encounter.
@@ -17,7 +20,7 @@ Remaining ToDo's:
 ===jQuery Pagination for Album Thumbs (in progress)===
 Similar to above item, but for the album thumbnails on the main gallery page. Must also support degradation for non-JS environments and should have option to disable for large album sets. 
     * ~~Add jQuery page transitions for pagination~~ (done 3/24)
-    * Add album description overlays via JQ  
+    * Add album description overlays via JQ, update 3/31, taking longer than expected. 
     * Fix active page bug, wrong link highlighted
 
 ===Faster Page Loads (done)===
