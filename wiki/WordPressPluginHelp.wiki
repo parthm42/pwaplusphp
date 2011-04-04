@@ -28,7 +28,7 @@ The Pro version (available for a [http://pwaplusphp.smccandl.net $5 donation]) a
 
 _Full Cache System_
 
-When enabled, the cache system provides up to 24x faster page loads by saving the album's XML data and thumbnails locally on the server. This eliminates slow api calls and image downloads for a better user experience. See [ProReleaseNotes release notes] for speed comparison chart.
+When enabled, the [ProCacheSystem cache system] provides up to 24x faster page loads by saving the album's XML data and thumbnails locally on the server. This eliminates slow api calls and image downloads for a better user experience. See [ProReleaseNotes release notes] for speed comparison chart.
 
 _jQuery Animation_
 
