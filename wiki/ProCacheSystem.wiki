@@ -18,7 +18,23 @@ If the XML file or any individual thumbnail does not exist, PWA+PHP will grab th
 
 = Cache Location =
 
-The cached data is stored under the wp-content/plugins/pwaplusphp/cache folder on your server.
+The cached data is stored in md5 obfuscated directories (more on that later) under the wp-content/plugins/pwaplusphp/cache folder on your server:
+
+{{{
+$ pwd
+pro/wp-content/plugins/pwaplusphp/cache
+$ ls -al
+total 144
+drwxr-xr-x 3 reminder reminder  4096 Apr  4 05:17 ./
+drwxr-xr-x 7 reminder reminder  4096 Apr  3 15:51 ../
+drwxr-xr-x 7 reminder reminder  4096 Apr  4 05:17 87ef428562a9054a05719725cbe90f94/
+-rw-r--r-- 1 reminder reminder  8730 Apr  4 08:02 87ef428562a9054a05719725cbe90f94-album-Beach_Demo?kind\=photo&thumbsize\=144c&imgmax\=800.xml
+-rw-r--r-- 1 reminder reminder 11791 Apr  4 12:58 87ef428562a9054a05719725cbe90f94-album-Cityscapes_Demo?kind\=photo&thumbsize\=144c&imgmax\=800.xml
+-rw-r--r-- 1 reminder reminder 28384 Apr  4 14:12 87ef428562a9054a05719725cbe90f94-album-OldMill_Demo?kind\=photo&thumbsize\=144c&imgmax\=800.xml
+-rw-r--r-- 1 reminder reminder 50449 Apr  4 09:04 87ef428562a9054a05719725cbe90f94-album-Shelties?kind\=photo&thumbsize\=144c&imgmax\=800.xml
+-rw-r--r-- 1 reminder reminder  8366 Apr  4 09:02 87ef428562a9054a05719725cbe90f94-album-SpringInDC_Demo?kind\=photo&thumbsize\=144c&imgmax\=800.xml
+-rw-r--r-- 1 reminder reminder 11600 Apr  4 16:17 87ef428562a9054a05719725cbe90f94?kind\=album&thumbsize\=144c.xml
+}}}
 
 = Refreshing Content =
 
