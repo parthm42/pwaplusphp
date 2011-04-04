@@ -17,14 +17,14 @@ Choose from one of 3 demos at [http://pwaplusphp.smccandl.net/pwademo.php].
 
 With the basic version of the plugin, you can:
 
-    * Embed all your public, private and unlisted Picasa web albums on any website
-    * Group and filter albums using tags or title keywords
-    * Allow users to download a full-resolution copy of any picture
-    * Uploaded images via email, web interface or desktop app and see them instantly
-    * Display image totals for the entire gallery and by album
-    * Configure the interface via [http://code.google.com/p/pwaplusphp/wiki/ConfigurationOptions 16 variables] (image size, thumbnail size, pagination, etc)
-    * Modify the included CSS file to match your site exactly
-    * Choose among 10 display languages! [http://code.google.com/p/pwaplusphp/wiki/LanguageFiles Learn More...]
+    * Embed all your public, private and unlisted Picasa web albums on any website
+    * Group and filter albums using tags or title keywords
+    * Allow users to download a full-resolution copy of any picture
+    * Uploaded images via email, web interface or desktop app and see them instantly
+    * Display image totals for the entire gallery and by album
+    * Configure the interface via [http://code.google.com/p/pwaplusphp/wiki/ConfigurationOptions 16 variables] (image size, thumbnail size, pagination, etc)
+    * Modify the included CSS file to match your site exactly
+    * Choose among 10 display languages! [http://code.google.com/p/pwaplusphp/wiki/LanguageFiles Learn More...]
 
 = Pro Version =
 
