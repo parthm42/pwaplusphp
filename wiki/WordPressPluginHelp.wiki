@@ -5,10 +5,6 @@
 
 This plugin provides all the features necessary to embed your private and public picasa album within your Wordpress site.  If you find a bug, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
 
-= Known Issues =
-|| *Affects* || *Issue* ||
-|| Various || See the [http://code.google.com/p/pwaplusphp/issues/list Issues Page] for other user-reported issues.||
-
 = Demo =
 
 Choose from one of 3 demos at [http://pwaplusphp.smccandl.net/pwademo.php].
@@ -31,19 +27,15 @@ With the basic version of the plugin, you can:
 The Pro version (available for a $5 donation) adds speed and style, with the following additional features. Version 0.9.4 was released April 4th -- see full details on the [ProReleaseNotes Release Notes] page.
 
 _Full Cache System_
-
 When enabled, the cache system provides up to 20x faster page loads by saving the album's XML data and thumbnails locally on the server. This eliminates slow api calls and image downloads for a better user experience.
 
 _jQuery Animation_
-
 Beautiful page transitions in any of 27 styles (fade, slide, etc) using jQuery Cycle. Hovering over an album thumbnail causes the image to slowly fade to reveal the album's description.
 
-_Integrated Comment System_
-
++Integrated Comment System+
 Users can comment on your photos and those comments are saved within Picasa Web Albums via the API. Comments are displayed with the photo and recent comments can be displayed in a widget.
 
 _Additional Shortcodes_
-
     * Album Cover Shortcode: Show album cover thumbnail in a post instead of album contents
     * Random Album Shortcode: Show random album, instead of random photo  
 
