@@ -3,41 +3,48 @@
 
 = Introduction =
 
-This plugin allows you to display your public and private (unlisted) Picasa albums within WP.  If you find a bug, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
+This plugin provides all the features necessary to embed your private and public picasa album within your Wordpress site.  If you find a bug, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
 
 = Known Issues =
 || *Affects* || *Issue* ||
-|| 0.9.3 Both || 404 error when clicking either thumbnail or text link. Fixed Standard on 2011-03-12.  Reinstall for updated code. Pro will be fixed in next release. See [http://code.google.com/p/pwaplusphp/issues/detail?id=83 Issue 83] for details.||
-|| 0.9.3 Pro || Album title and 'back to album' link not displayed.  Patch not yet published but see [http://code.google.com/p/pwaplusphp/issues/detail?id=73 Issue 73] for fix instructions.||
-|| 0.9.3 Pro || Setting 'Albums Per Page' not saved.  Will be fixed in next Pro release, in the meantime see [http://code.google.com/p/pwaplusphp/issues/detail?id=72 Issue 72] for fix instructions.||
-|| 0.9.3 Both || Paginated Albums Won't Open.  Patch published for Standard version.  Pro will be updated at next release -- see [http://code.google.com/p/pwaplusphp/issues/detail?id=78 Issue 78] for fix instructions.||
+|| 0.9.3 Basic || 404 error when clicking either thumbnail or text link. Fixed Standard on 2011-03-12.  Reinstall for updated code. Pro will be fixed in next release. See [http://code.google.com/p/pwaplusphp/issues/detail?id=83 Issue 83] for details.||
+|| 0.9.3 Basic || Paginated Albums Won't Open.  Patch published for Standard version.  Pro will be updated at next release -- see [http://code.google.com/p/pwaplusphp/issues/detail?id=78 Issue 78] for fix instructions.||
 || Various || See the [http://code.google.com/p/pwaplusphp/issues/list Issues Page] for other user-reported issues.||
 
 = Demo =
 
-===<font color='green'>2011-03-16: UPDATE: The all-new Pro v0.9.4 plugin is almost ready! View the beta demo at [http://pwaplusphp.smccandl.net/pro-beta/].</font>===
+Choose from one of 3 demos at [http://pwaplusphp.smccandl.net/pwademo.php].
 
-The PWA+PHP Pro for Wordpress plugin demo can be found at [http://pwaplusphp.smccandl.net/pro].
+= Basic Version =
 
-= Basic Version Features =
+With the basic version of the plugin, you can:
 
-    * Embed all your public, private and unlisted Picasa web albums on any website
-    * Group and filter albums [using keywords](http://code.google.com/p/pwaplusphp/wiki/Album_Filtering) in the album title
-    * Uploaded images via email, web interface or desktop app and see them instantly
-    * Display image totals for the entire gallery and by album
-    * Configure caption settings with 4 options
-    * Allow users to download full-size copies of your images
-    * Install script guides setup and token generation for private albums
-    * Interface configuration via [16 variables](http://code.google.com/p/pwaplusphp/wiki/ConfigurationOptions) (image size, thumbnail size, pagination, etc)
-    * Modify included CSS file to match your site exactly
-    * Available in 10 languages and extensible to others!
+    * Embed all your public, private and unlisted Picasa web albums on any website
+    * Group and filter albums using tags or title keywords
+    * Allow users to download a full-resolution copy of any picture
+    * Uploaded images via email, web interface or desktop app and see them instantly
+    * Display image totals for the entire gallery and by album
+    * Configure the interface via [http://code.google.com/p/pwaplusphp/wiki/ConfigurationOptions 16 variables] (image size, thumbnail size, pagination, etc)
+    * Modify the included CSS file to match your site exactly
+    * Choose among 10 display languages! [http://code.google.com/p/pwaplusphp/wiki/LanguageFiles Learn More...]
 
-= Additional Pro Version Features =
+= Pro Version =
 
-    * Comments: Show photo's comments in Shadowbox and Highslide, allow users to comment on photos, and show recent comments in widget
-    * Cache Thumbnails: Save thumbnails on server for faster page loads
-    * Album Cover Shortcode: Show album cover thumbnail in a post instead of album contents
-    * Random Album Shortcode: Show random album, instead of random photo
+The Pro version (available for a $5 donation) adds speed and style, with the following additional features.
+
+_Full Cache System_
+When enabled, the cache system provides up to 20x faster page loads by saving the album's XML data and thumbnails locally on the server. This eliminates slow api calls and image downloads for a better user experience.
+
+_jQuery Animation_
+Beautiful page transitions in any of 27 styles (fade, slide, etc) using jQuery Cycle. Hovering over an album thumbnail causes the image to slowly fade to reveal the album's description.
+
+_Integrated Comment System_
+Users can comment on your photos and those comments are saved within Picasa Web Albums via the API. Comments are displayed with the photo and recent comments can be displayed in a widget.
+
+_Additional Shortcodes_
+
+    * Album Cover Shortcode: Show album cover thumbnail in a post instead of album contents
+    * Random Album Shortcode: Show random album, instead of random photo  
 
 = Requirements =
 
@@ -51,9 +58,9 @@ To download the Pro Version, [http://pwaplusphp.smccandl.net/ make a donation] a
 
 = Installation =
 
-  # Extract archive in the plugins directory under wp-content
-  # Activate it in the admin panel
-  # Go to the Settings section, click on PWA+PHP and run thru the token generation and options-setting steps.
+  # Extract archive in the plugins directory under wp-content
+  # Activate it in the admin panel
+  # Go to the Settings section, click on PWA+PHP and run thru the token generation and options-setting steps.
 
 = Usage =
 
