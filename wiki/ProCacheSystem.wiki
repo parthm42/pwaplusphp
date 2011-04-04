@@ -44,7 +44,7 @@ PWA+PHP will automatically refresh cached files twice per day, after they're old
 
 = Security Concerns =
 
-PWA+PHP obfuscates the PicasaWeb username using md5, so cached files are stored in non-identifiable directories.  However, all files under wp-content are (by default) accessible and browsable.  This means that anyone could easily browse your cached thumbnails.
+PWA+PHP obfuscates the PicasaWeb username using md5, so cached files are stored in non-identifiable directories.  However, all files under wp-content are (by default) accessible and browsable.  This means that anyone could easily browse your cached thumbnails and this may be a concern for people storing private album thumbnails.
 
 To combat this, you can open up wp-content/.htaccess and add the following code at the top:
 
