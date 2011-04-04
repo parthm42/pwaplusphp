@@ -10,13 +10,7 @@ The most recent version of PWA+PHP Pro for Wordpress was released on 2011-04-03 
 Classy, modern jQuery pagination implemented via [http://www.malsup.com/jquery/cycle jQuery Cycle Plugin], providing 28 transition styles.  Degrades properly in browsers that don't support javascript.
 
 ===Faster Page Loads, Way Faster===
-The code block loop that displays the gallery images has been re-written for speed and users can now cache both image thumbnails and gallery XML locally on the server.  The [ProCacheSystem cache system] improvments have resulted in _drastically_ faster page loads.
-
-*Speed Comparison*
-||_Version_||_Mode_||_Album Size_||_1st Run_||_2nd Run_|| Improvement ||
-||0.9.3 Basic|| N/A || 84 images || .94 sec || .77 sec || N/A ||
-||0.9.4 Pro Beta|| Cache Off || 84 images || .84 sec || .57 sec || 17.5% ||
-||0.9.4 Pro Beta|| Cache On || 84 images || .04 sec || .03 sec || 96% (24x faster!)||
+The code block loop that displays the gallery images has been re-written for speed and users can now cache both image thumbnails and gallery XML locally on the server.  Head to the [ProCacheSystem cache system] page for examples showing drastic speed improvments.
 
 ===Better News & Announcements ===
 Added news feed to settings page to communicate updates, known issues, and other important information. (done, 3/28)
