@@ -7,8 +7,6 @@ This plugin provides all the features necessary to embed your private and public
 
 = Known Issues =
 || *Affects* || *Issue* ||
-|| 0.9.3 Basic || 404 error when clicking either thumbnail or text link. Fixed Standard on 2011-03-12.  Reinstall for updated code. Pro will be fixed in next release. See [http://code.google.com/p/pwaplusphp/issues/detail?id=83 Issue 83] for details.||
-|| 0.9.3 Basic || Paginated Albums Won't Open.  Patch published for Standard version.  Pro will be updated at next release -- see [http://code.google.com/p/pwaplusphp/issues/detail?id=78 Issue 78] for fix instructions.||
 || Various || See the [http://code.google.com/p/pwaplusphp/issues/list Issues Page] for other user-reported issues.||
 
 = Demo =
