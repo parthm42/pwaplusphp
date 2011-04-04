@@ -31,18 +31,21 @@ With the basic version of the plugin, you can:
 The Pro version (available for a $5 donation) adds speed and style, with the following additional features.
 
 _Full Cache System_
+
 When enabled, the cache system provides up to 20x faster page loads by saving the album's XML data and thumbnails locally on the server. This eliminates slow api calls and image downloads for a better user experience.
 
 _jQuery Animation_
+
 Beautiful page transitions in any of 27 styles (fade, slide, etc) using jQuery Cycle. Hovering over an album thumbnail causes the image to slowly fade to reveal the album's description.
 
 _Integrated Comment System_
+
 Users can comment on your photos and those comments are saved within Picasa Web Albums via the API. Comments are displayed with the photo and recent comments can be displayed in a widget.
 
 _Additional Shortcodes_
 
-    * Album Cover Shortcode: Show album cover thumbnail in a post instead of album contents
-    * Random Album Shortcode: Show random album, instead of random photo  
+    * Album Cover Shortcode: Show album cover thumbnail in a post instead of album contents
+    * Random Album Shortcode: Show random album, instead of random photo  
 
 = Requirements =
 
