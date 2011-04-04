@@ -18,7 +18,7 @@ The code block loop that displays the gallery images has been re-written for spe
 ||0.9.4 Pro Beta|| Cache Off || 84 images || .84 sec || .57 sec || 17.5% ||
 ||0.9.4 Pro Beta|| Cache On || 84 images || .04 sec || .03 sec || 96% (24x faster!)||
 
-===Better News & Announcements (done)===
+===Better News & Announcements ===
 Added news feed to settings page to communicate updates, known issues, and other important information. (done, 3/28)
 
 ===New Shortcode Overrides===
