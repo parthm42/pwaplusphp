@@ -1,0 +1,37 @@
+#summary Details about PWA+PHP Pro's cache system
+
+= Introduction =
+
+The PWA+PHP Pro cache system drastically improves page load times by storing local copies of album XML data and thumbnails on your server, eliminating repetitive api calls and reducing server load.
+
+= Enabling and Disabling =
+
+To change the status of the cache system, visit PWA+PHP's settings page and use the Cache Thumbnails drop-box under the Pro Options menu.
+
+= How It Works =
+
+Each time a user visits your album list or views a specific album, PWA+PHP calculates a unique filename for the Picasaweb API url that corresponds to that album.
+
+Next, it checks if a cached file by that name already exists, and if so, it reads the data in that locally-stored XML file instead of making an API call to PicasaWeb.  In addition, it attempts to use locally-stored copies of the thumbnails instead of loading remote images from the PicasaWeb servers.
+
+If the XML file or any individual thumbnail does not exist, PWA+PHP will grab those from the PicasaWeb server.
+
+= Cache Location =
+
+The cached data is stored under the wp-content/plugins/pwaplusphp/cache folder on your server.
+
+= Refreshing Content =
+
+PWA+PHP will automatically refresh cached files twice per day, after they're older than 10 hours.  You can also force a refresh at any time by appending &refresh=1 to your album URL, for example:
+
+{{{http://www.yoursite.com/?album=pictures&refresh=1}}}
+
+= Security Concerns =
+
+PWA+PHP obfuscates the PicasaWeb username using md5, so cached files are stored in non-identifiable directories.  However, all files under wp-content are (by default) accessible and browsable.  This means that anyone could easily browse your cached thumbnails.
+
+To combat this, you can open up wp-content/.htaccess and add the following code at the top:
+
+{{{Options -Indexes}}}
+
+This prevents the webserver from allowing users to browse the directories under wp-content/.  Any user with the full URL to the thumbnail would still be able to access the files, but this is a trade-off for the faster page loads and since the folder names are obfuscated, it's unlikely to be a real issue.
