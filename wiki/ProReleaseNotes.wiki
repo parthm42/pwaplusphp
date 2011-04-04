@@ -2,20 +2,9 @@
 
 == Introduction ==
 
-The most recent version of PWA+PHP Pro was released on 2011-04-03 with drastically reduced page load times, modern jQuery effects and a handful of bug fixes.
+The most recent version of PWA+PHP Pro for Wordpress was released on 2011-04-03 with drastically faster page loads, modern jQuery transition effects and better cross-browser support. Test drive the [http://pwaplusphp.smccandl.net/pro demo] or review the improvements below.
 
-== Release Notes ==
-
-#summary Status page for milestones and progress on upcoming release of PWA+PHP Pro.
-
-==v0.9.4 Released 2011-04-03==
-The new code is out.
-
-==Introduction==
-
-The next release of PWA+PHP Pro v0.9.4 for Wordpress has drastically faster page loads, modern jQuery transition effects and better cross-browser support. Test drive the [http://pwaplusphp.smccandl.net/pro demo] or review the improvements below.
-
-==New Feature Status ==
+==New Features==
 
 ===jQuery Pagination for Images & Albums===
 JQ pagination implemented via [http://www.malsup.com/jquery/cycle jQuery Cycle Plugin], providing 28 transition styles.  Degrades properly in browsers that don't support javascript.
