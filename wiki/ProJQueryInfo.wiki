@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Pro v0.9.4 and up has integrated jQuery animations for paginated albums (via [http://jquery.malsup.com/cycle/jQuery Cycle]) and album thumbnails also fade via JQ to reveal the album description and details.
+Pro v0.9.4 and up has integrated jQuery animations for paginated albums (via [http://jquery.malsup.com/cycle jQuery Cycle]) and album thumbnails also fade via JQ to reveal the album description and details.
 
 = Conflicts =
 
