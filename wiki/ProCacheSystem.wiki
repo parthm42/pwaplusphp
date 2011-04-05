@@ -12,7 +12,7 @@ The PWA+PHP Pro cache system drastically improves page load times by storing loc
 
 = Enabling and Disabling =
 
-To change the status of the cache system, visit PWA+PHP's settings page and use the Cache Thumbnails drop-box under the Pro Options menu.
+To change the status of the cache system, visit PWA+PHP's settings page and use the Cache Thumbnails drop-box under the Pro Options menu.  Please note, the first time you access an album it will load slowly while the web server saves the XML and individual images.  For large albums this can take 10-15 seconds.
 
 = How It Works =
 
