@@ -2,7 +2,7 @@
 
 == Introduction ==
 
-The most recent version of PWA+PHP Pro for Wordpress was released on 2011-04-03 with drastically faster page loads, modern jQuery transition effects and better cross-browser support. Test drive the [http://pwaplusphp.smccandl.net/pro demo] or review the improvements below.
+The most recent version of PWA+PHP Pro for Wordpress was released on 2011-04-03 with drastically faster page loads, modern jQuery transition effects and better cross-browser support. Test drive the *[http://pwaplusphp.smccandl.net/pro demo]* or review the improvements below.
 
 ==New Features==
 
