@@ -32,7 +32,7 @@ When enabled, the [ProCacheSystem cache system] provides up to 24x faster page l
 
 _jQuery Animation_
 
-Beautiful page transitions in any of 28 styles (fade, slide, etc) using jQuery Cycle. Hovering over an album thumbnail causes the image to slowly fade to reveal the album's description.
+Beautiful page transitions (fade, slide, etc) using [ProjQueryInfo jQuery] and hovering over an album thumbnail causes the image to slowly fade to reveal the album's description.
 
 _Integrated Comment System_
 
