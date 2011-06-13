@@ -16,7 +16,7 @@ The code block loop that displays the gallery images has been re-written for spe
 Added news feed to settings page to communicate updates, known issues, and other important information.
 
 ===New Shortcode Overrides===
-Added ability to override the username within shortcode to display any user's public album and albums for different users on each page. See the usage section on the [WordpressPluginHelp] page.
+Added ability to override the username within shortcode to display any user's public album and albums for different users on each page. See the usage section on the [WordPressPluginHelp] page.
 
 ===Bugs Fixed===
 || [http://code.google.com/p/pwaplusphp/issues/detail?id=86 Issue 86] || Caching broken for some installs||
