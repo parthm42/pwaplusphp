@@ -24,7 +24,7 @@ With the basic version of the plugin, you can:
 
 = Pro Version =
 
-The Pro version (available for a [http://pwaplusphp.smccandl.net $5 donation]) adds speed and style, with the following additional features. Version 0.9.4 was released April 4th -- see full details on the [ProReleaseNotes Release Notes] page.
+The Pro version (available [http://codecanyon.net/item/pwaphp-pro/399042 on CodeCanyon]) adds speed and style, with the following additional features. Version 0.9.4 was released April 4th -- see full details on the [ProReleaseNotes Release Notes] page.
 
 _Full Cache System_
 
