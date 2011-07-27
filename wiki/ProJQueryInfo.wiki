@@ -17,6 +17,10 @@ You can disable PWA+PHP's jQuery calls in pwapluphp.php by removing them or comm
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
+= Still not working? =
+
+Check out [http://code.google.com/p/pwaplusphp/issues/detail?id=106&can=1&start=100 Issue 106].
+
 <!-- include Cycle plugin --> 
 
 <script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
