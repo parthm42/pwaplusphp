@@ -45,7 +45,7 @@ _Additional Shortcodes_
 
 = Requirements =
 
-You must have installed and activated Highslide, Fancybox, Shadowbox or Lightbox WP plugin. [http://code.google.com/p/pwaplusphp/downloads/list Pro version] requires Shadowbox or Highslide for comments display.
+You must have installed and activated Highslide, Fancybox, Shadowbox or Lightbox WP plugin. [http://code.google.com/p/pwaplusphp/downloads/list Pro version] requires [http://wordpress.org/extend/plugins/shadowbox-js/ "Shadowbox JS"] or [http://wordpress.org/extend/plugins/auto-highslide/ Auto-Highslide] for comments display.
 
 = Download =
 
