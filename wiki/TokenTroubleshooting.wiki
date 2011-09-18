@@ -12,7 +12,9 @@ Wordpress MU is only supported by PWA+PHP v0.9.5+, but you might be able to hack
 
 *Message: Network Is Unreachable*
 
-{{{Error: Could not generate session token! Exiting...
-Curl error: Failed to connect to 2a00:1450:8005::68: Network is unreachable}}}
+{{{
+Error: Could not generate session token! Exiting...
+Curl error: Failed to connect to 2a00:1450:8005::68: Network is unreachable
+}}}
 
 Seee [http://code.google.com/p/pwaplusphp/issues/detail?id=76 Issue 76]
