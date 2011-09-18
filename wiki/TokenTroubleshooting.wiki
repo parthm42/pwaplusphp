@@ -17,4 +17,4 @@ Error: Could not generate session token! Exiting...
 Curl error: Failed to connect to 2a00:1450:8005::68: Network is unreachable
 }}}
 
-Seee [http://code.google.com/p/pwaplusphp/issues/detail?id=76 Issue 76]
+See [http://code.google.com/p/pwaplusphp/issues/detail?id=76 Issue 76]
