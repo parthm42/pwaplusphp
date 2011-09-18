@@ -1,8 +1,6 @@
 #summary PWA+PHP gData Token Generation Troubleshooting Tips
 
-= Introduction =
-
-If you're having problems with Install Step 1: Token Generation, review the information below for possible solutions.
+===If you're having problems with Install Step 1: Token Generation, review the information below for possible solutions.===
 
 *Problem: When I click on "grant access" button on google accounts page, I am redirected to the WordPress login page.*
 
