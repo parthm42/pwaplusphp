@@ -4,21 +4,17 @@
 
 If you're having problems with Install Step 1: Token Generation, review the information below for possible solutions.
 
-= Problem: When I click on "grant access" button on google accounts page, I am redirected to the WordPress login page. =
+*Problem: When I click on "grant access" button on google accounts page, I am redirected to the WordPress login page.*
 
 This indicates a cookie problem in your browser or a wordpress url mismatch, usually www vs non-www.  See [http://code.google.com/p/pwaplusphp/issues/detail?id=119 Issue 119]
 
-= Problem: Can't generate token with Wordpress MU =
+*Problem: Can't generate token with Wordpress MU*
 
 Wordpress MU is only supported by PWA+PHP v0.9.5+, but you might be able to hack other versions.  See [http://code.google.com/p/pwaplusphp/issues/detail?id=102 Issue 102]
 
-= Message: Network Is Unreachable =
+*Message: Network Is Unreachable*
 
-*Message*
-Error: Could not generate session token! Exiting...
-Curl error: Failed to connect to 2a00:1450:8005::68: Network is unreachable
+{{{Error: Could not generate session token! Exiting...
+Curl error: Failed to connect to 2a00:1450:8005::68: Network is unreachable}}}
 
-*Solution*
-
-See [http://code.google.com/p/pwaplusphp/issues/detail?id=76 Issue 76]
-
+Seee [http://code.google.com/p/pwaplusphp/issues/detail?id=76 Issue 76]
