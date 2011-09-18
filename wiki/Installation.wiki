@@ -18,7 +18,7 @@ Setting up PicasaWeb tokens for site: yoursite.com
 If this is correct, Login to your Google Account
 }}}
   * Click the link to login and then you should see a page from google asking you to Grant or Deny access.
-  * Click Grant and the token you just generated will be displayed and saved to the config file
+  * Click Grant and the token you just generated will be displayed and saved to the config file.  If not, see TokenTroubleshooting.
   * Click the link to continue to the next step and set your preferences
   * After setup is complete, you can rename the directory or otherwise move the files to another location as desired.
 
