@@ -1,3 +1,0 @@
-#summary PWA+PHP Pro Picasa Wordpress Plugin Release Notes
-
-See: http://pwaplusphp.smccandl.net/pro/documentation/#!/changelog
