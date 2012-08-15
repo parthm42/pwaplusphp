@@ -1,3 +1,0 @@
-#summary Details about PWA+PHP Pro's cache system
-
-See: http://pwaplusphp.smccandl.net/pro/documentation/#!/cache_system
