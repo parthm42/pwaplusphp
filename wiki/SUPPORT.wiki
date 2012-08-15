@@ -3,4 +3,8 @@
 
 = Introduction =
 
-If you can't find answers to your questions in the [http://code.google.com/p/pwaplusphp/w/list wiki], check out the [http://pwaplusphp.smccandl.net/support support page]
+The content of all missing wiki pages was moved to the new support site:
+
+[http://pwaplusphp.smccandl.net/support/]
+
+If you need help, that's the best place to start.
