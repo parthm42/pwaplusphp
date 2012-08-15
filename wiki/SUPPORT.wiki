@@ -1,0 +1,6 @@
+#summary PWA+PHP Help & Support
+#labels Featured
+
+= Introduction =
+
+If you can't find answers to your questions in the [http://code.google.com/p/pwaplusphp/w/list wiki], check out the [http://pwaplusphp.smccandl.net/support support page]
