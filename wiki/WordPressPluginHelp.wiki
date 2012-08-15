@@ -3,7 +3,7 @@
 
 = Introduction =
 
-This plugin provides all the features necessary to embed your private and public picasa album within your Wordpress site.  If you find a bug, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
+This plugin provides all the features necessary to embed your private and public picasa album within your Wordpress site.  Support is available at: [http://pwaplusphp.smccandl.net/support/]
 
 = Download It =
 
