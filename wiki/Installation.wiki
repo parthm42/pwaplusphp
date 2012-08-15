@@ -1,4 +1,7 @@
 #summary This page describes the installation process for PWA+PHP in both standalone and non-standalone configurations.
+== Plugin Installation Procedures ==
+
+See: [http://pwaplusphp.smccandl.net/support/responses/how-do-i-install-pwa-php]
 
 == Procedure For Standalone Installation ==
 
