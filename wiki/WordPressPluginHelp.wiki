@@ -5,72 +5,10 @@
 
 This plugin provides all the features necessary to embed your private and public picasa album within your Wordpress site.  If you find a bug, please report it on the [http://code.google.com/p/pwaplusphp/issues/list issues page].
 
-= Demo =
+= Download It =
 
-Choose from one of 3 demos at [http://pwaplusphp.smccandl.net/pwademo.php].
-
-= Basic Version =
-
-With the basic version of the plugin, you can:
-
-    * Embed all your public, private and unlisted Picasa web albums on any website
-    * Group and filter albums using tags or title keywords
-    * Allow users to download a full-resolution copy of any picture
-    * Uploaded images via email, web interface or desktop app and see them instantly
-    * Display image totals for the entire gallery and by album
-    * Configure the interface via [http://code.google.com/p/pwaplusphp/wiki/ConfigurationOptions 16 variables] (image size, thumbnail size, pagination, etc)
-    * Modify the included CSS file to match your site exactly
-    * Choose among 10 display languages! [http://code.google.com/p/pwaplusphp/wiki/LanguageFiles Learn More...]
-
-= Pro Version =
-
-The Pro version (available [http://codecanyon.net/item/pwaphp-pro/399042 on CodeCanyon]) adds speed and style, with the following additional features. Version 0.9.4 was released April 4th -- see full details on the [ProReleaseNotes Release Notes] page.
-
-_Full Cache System_
-
-When enabled, the [ProCacheSystem cache system] provides up to 24x faster page loads by saving the album's XML data and thumbnails locally on the server. This eliminates slow api calls and image downloads for a better user experience. See [ProCacheSystem cache system] page for speed comparison chart.
-
-_jQuery Animation_
-
-Beautiful page transitions (fade, slide, etc) using [ProJQueryInfo jQuery] and hovering over an album thumbnail causes the image to slowly fade to reveal the album's description.
-
-_Integrated Comment System_
-
-Users can comment on your photos and those comments are saved within Picasa Web Albums via the API. Comments are displayed with the photo and recent comments can be displayed in a widget.
-
-_Additional Shortcodes_
-
-    * Album Cover Shortcode: Show album cover thumbnail in a post instead of album contents
-    * Random Album Shortcode: Show random album, instead of random photo  
-
-= Requirements =
-
-You must have installed and activated Highslide, Fancybox, Shadowbox or Lightbox WP plugin. [http://code.google.com/p/pwaplusphp/downloads/list Pro version] requires [http://wordpress.org/extend/plugins/shadowbox-js/ "Shadowbox JS"] or [http://wordpress.org/extend/plugins/auto-highslide/ "Auto-Highslide"] for comments display.
-
-= Download =
-
-To download the basic version, head to [http://wordpress.org/extend/plugins/pwaplusphp/]
-
-To purchase the Pro Version, [http://codecanyon.net/item/pwaphp-pro/399042 head to CodeCanyon] and you can download the plugin zip file instantly.
-
-= Installation =
-
-  # Extract archive in the plugins directory under wp-content
-  # Activate it in the admin panel
-  # Go to the Settings section, click on PWA+PHP and run thru the token generation and options-setting steps.
+[http://wordpress.org/extend/plugins/pwaplusphp/]
 
 = Usage =
 
-Insert one of the shortcodes below into your pages and widgets:
-
-|| *Shortcode* || *Result* || *Use In* ||
-||{{{[pwaplusphp]}}}||Displays all your albums, click one to see the photos in that album||Page||
-||{{{[pwaplusphp album="some_album"]}}}||Display photos from some_album only||Page, Post||
-||{{{[pwaplusphp album="some_album" images_per_page="20" image_size="800" thumbnail_size="32"]}}}||Display photos from some_album only with different settings for image size, thumbnail size and images per page. (v0.9.3+ only)||Page, Post||
-||{{{[pwaplusphp tag="beach"]}}}||Display photos matching tag 'beach' from all albums||Page, Post||
-||{{{[pwaplusphp album="Miami" tag="beach"]}}}||Display photos matching tag 'beach' from the 'Miami' album only||Page, Post||
-||{{{[pwaplusphp album="some_album" cover="TRUE"]}}}||(Pro Only) Display cover image of some_album, clicking takes user to page set as Main Photo Page in settings panel||Widget||
-||{{{[pwaplusphp album="random_photo"]}}}||Displays one randomly selected photo||Widget||
-||{{{[pwaplusphp album="random_photo"]}}}||(Pro Only) Displays one randomly selected album, clicking takes user to page set as Main Photo Page in settings panel||Widget||
-||{{{[pwaplusphp filter="2009"]}}}||Displays all albums with `_2009` in the title, see Album_Filtering||Page||
-||{{{[pwaplusphp comments="5"]}}}||(Pro Only) Display 5 most recent comments from all your albums||Widget||
+See: [http://pwaplusphp.smccandl.net/support/responses/how-do-i-use-the-wordpress-plugin-shortcodes]
