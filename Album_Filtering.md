@@ -1,0 +1,1 @@
+See: http://pwaplusphp.smccandl.net/support/responses/how-do-i-use-album-filtering

@@ -1,0 +1,1 @@
+See: http://pwaplusphp.smccandl.net/support/responses/problems-with-install-step-1-token-generation
